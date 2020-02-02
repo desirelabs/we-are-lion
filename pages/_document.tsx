@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ThemeProvider } from "styled-components";
 import theme from "../components/theme";
+import { GlobalStyle } from "../components/ui/globalStyle";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -19,6 +20,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <ThemeProvider theme={theme}>
+            <GlobalStyle />
             <Main />
             <NextScript />
           </ThemeProvider>

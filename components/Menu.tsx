@@ -1,8 +1,16 @@
 import { Navigation, NavItem } from "./ui/Navigation";
 import Link from "next/link";
+import styled from "styled-components";
 
-export const Menu = () => (
-  <Navigation>
+const Fixed = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+`;
+
+export const Menu = ({ dark }: { dark?: boolean }) => (
+  <Navigation dark>
     <Link href="/">
       <NavItem>Accueil</NavItem>
     </Link>

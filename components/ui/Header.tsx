@@ -7,5 +7,9 @@ export const Header = styled.header<{ isClear?: boolean }>`
   justify-content: space-between;
   align-items: center;
   max-width: ${theme.atoms.layout.desktop.containerWidth};
+  width: 100%;
   margin: 15px auto;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 `;

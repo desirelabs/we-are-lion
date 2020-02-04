@@ -1,25 +1,40 @@
-import { Header } from "../components/ui/Header";
-import { Menu } from "../components/Menu";
-import { Logo } from "../components/ui/Logo";
+import { Layout } from "../components/ui/Layout";
+import { TextBlock } from "../components/ui/TextBlock";
 import { Hero, HeroText, HeroSubText } from "../components/ui/Hero";
 import { SocialBar } from "../components/ui/SocialBar";
+import {
+  Grid,
+  GridBG,
+  GridItem1,
+  GridItem2,
+  GridItem3,
+  GridItem4,
+  GridItem5,
+  GridItem6,
+  GridItem7
+} from "../components/ui/Grid";
 
 export default () => (
-  <>
-    <Header>
-      <Logo src="/img/logo@2x.png" />
-      <Menu dark />
-    </Header>
+  <Layout>
     <Hero image="/img/hero.jpg">
       <HeroText>Plush</HeroText>
       <HeroSubText>Agence créative</HeroSubText>
       <SocialBar />
     </Hero>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero doloribus
-      expedita harum illum recusandae veniam minus mollitia eligendi corrupti
-      corporis, pariatur nesciunt enim asperiores ex natus voluptas quae,
-      aliquam animi.
-    </p>
-  </>
+    <Grid>
+      <GridItem1>
+        <TextBlock text="About us" colored={true} />
+      </GridItem1>
+      <GridItem2>2</GridItem2>
+      <GridItem3>3</GridItem3>
+      <GridItem4>4</GridItem4>
+      <GridItem5>5</GridItem5>
+      <GridItem6>
+        <GridBG style="DARK">
+          <TextBlock text="What we do" colored={false} />
+        </GridBG>
+      </GridItem6>
+      <GridItem7>7</GridItem7>
+    </Grid>
+  </Layout>
 );

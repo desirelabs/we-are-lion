@@ -8,7 +8,8 @@ export const Hero = styled.div<{ image: string }>`
   background-image: url(${props => props.image});
   background-position: center center;
   background-attachment: scroll;
-  background-position-y: -230px;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

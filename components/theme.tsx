@@ -16,12 +16,12 @@ export default {
     },
     colors: {
       white: "#fff",
-      grey: "#242424",
+      grey: "#484848",
       dark: "#131313",
       black: "#000000",
       primary: "#ff2e64",
       secondary: "#ea6060",
-      lightGrey: "#c4c4c4"
+      lightGrey: "#e6e6e6"
     }
   }
 };

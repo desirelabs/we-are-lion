@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import theme from "../theme";
 
 export const Grid = styled.div`
-  min-height: 100vh;
+  min-height: calc(490px * 3);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -9,9 +10,29 @@ export const Grid = styled.div`
 `;
 
 export const GridBG = styled.div<{
-  style: "COLORED" | "DARK" | "LIGHT";
+  colored: "COLORED" | "DARK" | "LIGHT" | "WHITE";
 }>`
+  display: flex;
   position: absolute;
+  ${({ colored }) =>
+    colored === "DARK" && `background-color: ${theme.atoms.colors.grey}`};
+  ${({ colored }) =>
+    colored === "LIGHT" && `background-color: ${theme.atoms.colors.lightGrey}`};
+  ${({ colored }) =>
+    colored === "COLORED" &&
+    `background-image: linear-gradient(
+      to left,
+      ${theme.atoms.colors.secondary} 0%,
+      ${theme.atoms.colors.primary} 100%
+    );`};
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  & > * {
+    max-width: 80%;
+    margin: auto;
+  }
 `;
 
 export const GridItem1 = styled.div.attrs({ className: "grid-item-1" })`

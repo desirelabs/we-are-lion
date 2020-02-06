@@ -61,7 +61,7 @@ export const TextBlockWrapper = styled.div<{ colored: boolean }>`
             color: ${theme.atoms.colors.primary};
           `
         : css`
-            color: ${theme.atoms.colors.white};
+            color: ${theme.atoms.colors.dark};
           `};
   }
 `;
@@ -70,10 +70,10 @@ export const TextBlock = ({ text, colored = false }) => (
   <TextBlockWrapper colored={colored}>
     <TextBlockText>
       {text.split(" ").map((chunk, i) => (
-        <>
+        <span key={i}>
           {chunk}
           <br />
-        </>
+        </span>
       ))}
     </TextBlockText>
   </TextBlockWrapper>

@@ -10,6 +10,7 @@ export const Header = styled.header<{ isClear?: boolean }>`
   width: 100%;
   margin: 15px auto;
   position: fixed;
+  z-index: 1;
   left: 50%;
   transform: translateX(-50%);
 `;

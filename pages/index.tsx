@@ -4,7 +4,7 @@ import { Text } from "../components/ui/Text";
 import { TextBlock } from "../components/ui/TextBlock";
 import { Hero, HeroText, HeroSubText } from "../components/ui/Hero";
 import { SocialBar } from "../components/ui/SocialBar";
-import { Project, Description, Content } from "../components/ui/Project";
+import * as Project from "../components/ui/Project";
 import { Fullpage } from "../components/Fullpage";
 import {
   Grid,
@@ -17,6 +17,18 @@ import {
   GridItem6,
   GridItem7
 } from "../components/ui/Grid";
+import {
+  Portfolio,
+  PortfolioItem1,
+  PortfolioItem2,
+  PortfolioItem3,
+  PortfolioItem4,
+  PortfolioItem5,
+  PortfolioItem6,
+  PortfolioItem7,
+  PortfolioItem8,
+  PortfolioItem9
+} from "../components/ui/Portfolio";
 
 export default () => (
   <Layout>
@@ -76,7 +88,6 @@ export default () => (
           </GridBG>
         </GridItem6>
         <GridItem7>
-          {" "}
           <GridBG colored="WHITE">
             <Text decorated={true}>
               Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
@@ -100,41 +111,84 @@ export default () => (
         <HeroSubText>Une agence pas comme les autres</HeroSubText>
       </Hero>
 
-      <Grid>
-        <GridItem1>
-          <GridBG colored="LIGHT">
-            <TextBlock text="Nos projets" colored={true} />
-          </GridBG>
-        </GridItem1>
-        <GridItem2>
-          <Project>
-            <Description>
-              <Content>Du texte</Content>{" "}
-            </Description>
-          </Project>
-        </GridItem2>
-        <GridItem3>
-          <Project>
-            <Description>
-              <Content>Du texte</Content>{" "}
-            </Description>
-          </Project>
-        </GridItem3>
-        <GridItem4>
-          <Project>
-            <Description>
-              <Content>Du texte</Content>
-            </Description>
-          </Project>
-        </GridItem4>
-        <GridItem5>
-          <Project>
-            <Description>
-              <Content>Du texte</Content>
-            </Description>
-          </Project>
-        </GridItem5>
-      </Grid>
+      <Portfolio>
+        <PortfolioItem1>
+          <TextBlock text="Nos projets" colored={true} />
+        </PortfolioItem1>
+        <PortfolioItem2>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem2>
+        <PortfolioItem3>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem3>
+        <PortfolioItem4>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem4>
+        <PortfolioItem5>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem5>
+        <PortfolioItem6>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem6>
+        <PortfolioItem7>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            >
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem7>
+        <PortfolioItem8>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem8>
+        <PortfolioItem9>
+          <Project.Wrapper>
+            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            <Project.Content>
+              <Project.Title>Title</Project.Title>
+              <Project.Description>description</Project.Description>
+            </Project.Content>
+          </Project.Wrapper>
+        </PortfolioItem9>
+      </Portfolio>
     </Fullpage>
   </Layout>
 );

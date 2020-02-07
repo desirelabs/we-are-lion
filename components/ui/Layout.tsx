@@ -1,8 +1,8 @@
-import { Header } from "./Header";
+import { Header, Navigation } from "./Header";
 import { Logo } from "./Logo";
 import { Menu } from "../Menu";
 
-export const Layout = ({ children }) => (
+export const Layout = ({ children, isClear }) => (
   <>
     <style jsx global>
       {`
@@ -12,9 +12,11 @@ export const Layout = ({ children }) => (
         }
       `}
     </style>
-    <Header>
-      <Logo src="/img/logo@2x.png" />
-      <Menu dark />
+    <Header isClear={isClear}>
+      <Navigation>
+        <Logo src="/img/logo@2x.png" />
+        <Menu dark />
+      </Navigation>
     </Header>
     {children}
   </>

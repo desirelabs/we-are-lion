@@ -29,10 +29,16 @@ import {
   PortfolioItem8,
   PortfolioItem9
 } from "../components/ui/Portfolio";
+import { useState } from "react";
 
-export default () => (
-  <Layout>
-    <Fullpage>
+export default () => {
+  const [navIndex, setNavIndex] = useState(0);
+
+  const handleUpdateIndex = (index: number) => setNavIndex(index);
+
+  return (
+    <Layout isClear={navIndex !== 0}>
+      {/* <Fullpage handleUpdateIndex={handleUpdateIndex}> */}
       <Hero image="/img/hero.jpg">
         <HeroText>Plush</HeroText>
         <HeroSubText>Agence créative</HeroSubText>
@@ -189,6 +195,7 @@ export default () => (
           </Project.Wrapper>
         </PortfolioItem9>
       </Portfolio>
-    </Fullpage>
-  </Layout>
-);
+      {/* </Fullpage> */}
+    </Layout>
+  );
+};

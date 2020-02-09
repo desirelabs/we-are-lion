@@ -39,7 +39,7 @@ export const HeroText = styled.div`
 
 export const HeroSubText = styled.div`
   width: 534px;
-  height: 62px;
+  min-height: 62px;
   background-image: linear-gradient(
     to left,
     ${theme.atoms.colors.secondary} 0%,

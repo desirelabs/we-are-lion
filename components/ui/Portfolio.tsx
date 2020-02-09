@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Portfolio = styled.div`
   min-height: 980px;
   display: grid;
+  grid-gap: 3px;
   grid-template-columns: 1.4fr 1.1fr 1.1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "grid-item-1 grid-item-2 grid-item-3 grid-item-4" "grid-item-1 grid-item-2 grid-item-5 grid-item-6" "grid-item-1 grid-item-7 grid-item-9 grid-item-9" "grid-item-1 grid-item-8 grid-item-9 grid-item-9";

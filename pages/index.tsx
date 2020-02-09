@@ -119,80 +119,61 @@ export default () => {
 
       <Portfolio>
         <PortfolioItem1>
-          <TextBlock text="Nos projets" colored={true} />
+          <GridBG colored="WHITE">
+            <TextBlock text="Nos projets" colored={true} />
+          </GridBG>
         </PortfolioItem1>
         <PortfolioItem2>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            title="Geoffrey Couët"
+            description="Geoffrey Couët est une étoile montante du cinéma français. En 2014 un virage est amorcé dans sa carrière et il décide de me confier la création de son site personnel."
+            figure="/img/portfolio/gcouet/gcouet-homepage.png"
+            passThrough={true}
+          />
         </PortfolioItem2>
         <PortfolioItem3>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            figure="/img/portfolio/gcouet/gcouet-parcours.png"
+            passThrough={false}
+          />
         </PortfolioItem3>
         <PortfolioItem4>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            figure="/img/portfolio/gcouet/gcouet-portfolio.png"
+            passThrough={false}
+          />
         </PortfolioItem4>
         <PortfolioItem5>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            figure="/img/portfolio/gcouet/gcouet-portfolio-detail.png"
+            passThrough={false}
+          />
         </PortfolioItem5>
         <PortfolioItem6>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            figure="/img/portfolio/gcouet/gcouet-portfolio-filtre.png"
+            passThrough={false}
+          />
         </PortfolioItem6>
         <PortfolioItem7>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            >
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            figure="/img/portfolio/atsouhaits/ats-portfolio.png"
+            passThrough={false}
+          />
         </PortfolioItem7>
         <PortfolioItem8>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            figure="/img/portfolio/atsouhaits/ats-homepage-full.png"
+            passThrough={false}
+          />
         </PortfolioItem8>
         <PortfolioItem9>
-          <Project.Wrapper>
-            <img src="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-            <Project.Content>
-              <Project.Title>Title</Project.Title>
-              <Project.Description>description</Project.Description>
-            </Project.Content>
-          </Project.Wrapper>
+          <Project.PortfolioProject
+            title="ATSouhaits"
+            description="Aude Touati est décoratrice événementielle. Après plusieurs années d'exercice elle fait appel à mes services pour la refonte complète de son site. Un vent de fraicheur dans un style classy est adopté, le succès est au rendez-vous."
+            figure="/img/portfolio/atsouhaits/ats-presentation.png"
+            passThrough={true}
+          />
         </PortfolioItem9>
       </Portfolio>
       {/* </Fullpage> */}

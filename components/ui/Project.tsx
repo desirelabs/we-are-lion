@@ -31,36 +31,91 @@ export const Content = styled.div`
   align-items: center;
 `;
 
-export const Wrapper = styled.div`
+const Figure = styled.div<{ image: string }>`
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  ${({ image }) => image && `background-image: url(${image})`};
+  background-size: cover;
+  transition: all 0.25s ease-in-out;
+  &:after {
+    content: "";
+    transition: all 0.25s ease-in-out;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      to left,
+      ${theme.atoms.colors.lightGrey} 0%,
+      ${theme.atoms.colors.lightGrey} 100%
+    );
+  }
+`;
+
+export const Wrapper = styled.div<{ passThrough?: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   cursor: pointer;
+  padding: 20px;
   display: flex;
+  overflow: hidden;
   img {
     position: absolute;
   }
   ${Content} {
-    display: none;
+    display: block;
   }
   &:hover {
-    ${Content} {
-      display: block;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: linear-gradient(
-        to left,
-        ${theme.atoms.colors.secondary} 0%,
-        ${theme.atoms.colors.primary} 100%
-      );
+    ${Figure} {
+      transform: scale(1.2);
+      &:after {
+        content: "";
+        opacity: 0;
+      }
     }
   }
+  &:after {
+    ${({ passThrough }) => passThrough && `content: ""`};
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      to left,
+      ${theme.atoms.colors.secondary} 0%,
+      ${theme.atoms.colors.primary} 100%
+    );
+  }
 `;
+
+export const PortfolioProject = ({
+  title,
+  description,
+  figure,
+  passThrough
+}: {
+  title?: string;
+  description?: string;
+  figure: string;
+  passThrough?: boolean;
+}) => (
+  <Wrapper passThrough={passThrough}>
+    <Figure image={figure} />
+    {title && description && (
+      <Content>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+      </Content>
+    )}
+  </Wrapper>
+);

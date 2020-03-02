@@ -14,8 +14,14 @@ const Link = styled(GLink)`
   text-decoration: none;
 `
 
-export const Menu = ({ dark }: { dark?: boolean }) => (
-  <Navigation dark>
+export const Menu = ({
+  dark,
+  orientation,
+}: {
+  dark?: boolean
+  orientation?: "vertical" | "horizontal"
+}) => (
+  <Navigation dark orientation={orientation || "horizontal"}>
     <Link to="/">
       <NavItem>Accueil</NavItem>
     </Link>
@@ -25,9 +31,9 @@ export const Menu = ({ dark }: { dark?: boolean }) => (
     <Link to="/blog">
       <NavItem>Blog</NavItem>
     </Link>
-    <Link to="/portfolio">
-      <NavItem>Portfolio</NavItem>
-    </Link>
+    {/*<Link to="/portfolio">*/}
+    {/*  <NavItem>Portfolio</NavItem>*/}
+    {/*</Link>*/}
     <Link to="/contact">
       <NavItem>Contact</NavItem>
     </Link>

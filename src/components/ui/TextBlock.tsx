@@ -1,31 +1,19 @@
 import * as React from "react"
-import styled, { css } from "styled-components"
-import theme from "../theme"
+import styled from "styled-components"
 
 export const TextBlockText = styled.h3``
 
-const gardientText = css`
-  background-image: linear-gradient(
-    to left,
-    ${theme.atoms.colors.secondary} 0%,
-    ${theme.atoms.colors.primary} 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: ${theme.atoms.colors.primary};
-`
-
 export const TextBlockWrapper = styled.div<{ colored: boolean }>`
   width: 244px;
-  height: 174px;
+  min-height: 174px;
   position: relative;
+  padding: 15px;
   ${({ colored }) =>
     colored
       ? `background-image: linear-gradient(
     to left,
-    ${theme.atoms.colors.secondary} 0%,
-    ${theme.atoms.colors.primary} 100%
+    ${({ theme }) => theme.atoms.colors.secondary} 0%,
+    ${({ theme }) => theme.atoms.colors.primary} 100%
   )`
       : "backgound-color: transparent"};
   &::before {
@@ -40,30 +28,29 @@ export const TextBlockWrapper = styled.div<{ colored: boolean }>`
   }
 
   ${TextBlockText} {
-    position: absolute;
-    right: 15px;
-    font-family: "Montserrat";
+    position: relative;
+    font-family: Bitter, serif;
     font-size: 40px;
-    font-weight: 800;
-    line-height: 34px;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: right;
+    margin: 0;
     ${({ colored }) =>
       colored
-        ? css`
-            background-image: linear-gradient(
-              to left,
-              ${theme.atoms.colors.secondary} 0%,
-              ${theme.atoms.colors.primary} 100%
-            );
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: ${theme.atoms.colors.primary};
-          `
-        : css`
-            color: ${theme.atoms.colors.dark};
-          `};
+        ? `background-image: linear-gradient(
+      to left,
+      ${({ theme }) => theme.atoms.colors.secondary} 0%,
+      ${({ theme }) => theme.atoms.colors.primary} 100%
+    )`
+        : null};
+    ${({ colored }) => (colored ? "background-clip: text" : null)};
+    ${({ colored }) => (colored ? "-webkit-background-clip: text" : null)};
+    ${({ colored }) =>
+      colored ? "-webkit-text-fill-color: transparent" : null};
+    ${({ colored }) =>
+      colored
+        ? `color: ${({ theme }) => theme.atoms.colors.primary}`
+        : `color: ${({ theme }) => theme.atoms.colors.dark}`};
   }
 `
 

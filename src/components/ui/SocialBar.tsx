@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import theme from "../theme"
 
 export const SocialBar = styled.div`
   height: 84px;
@@ -7,8 +6,8 @@ export const SocialBar = styled.div`
   background-color: #030edc;
   background-image: linear-gradient(
     to left,
-    ${theme.atoms.colors.secondary} 0%,
-    ${theme.atoms.colors.primary} 100%
+    ${({ theme }) => theme.atoms.colors.secondary} 0%,
+    ${({ theme }) => theme.atoms.colors.primary} 100%
   );
   position: absolute;
   bottom: 0;

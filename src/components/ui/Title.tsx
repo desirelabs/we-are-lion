@@ -1,7 +1,15 @@
 import styled from "styled-components"
 
+export const SectionTitle = styled.h2`
+  font-family: Bitter, serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 4rem auto;
+  font-size: 3rem;
+`
+
 export const Title = styled.h2`
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 38px;
   font-weight: 700;
   line-height: 48px;

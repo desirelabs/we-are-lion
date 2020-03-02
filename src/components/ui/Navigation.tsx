@@ -1,33 +1,42 @@
 import styled from "styled-components"
-import theme from "../theme"
 
-export const NavItem = styled.a`
+export const NavItem = styled.span`
   padding: 0 9px;
   color: #c4c4c4;
-  font-family: "Montserrat";
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 63px;
   text-transform: uppercase;
   transition: color 0.25s ease-in-out;
   &:hover {
-    color: ${theme.atoms.colors.primary};
+    color: ${({ theme }) => theme.atoms.colors.primary};
     cursor: pointer;
   }
 `
 
-export const Navigation = styled.nav<{ dark?: boolean }>`
-  max-height: 60px;
+export const FooterNavigation = ""
+
+export const Navigation = styled.nav<{
+  dark?: boolean
+  orientation: "vertical" | "horizontal"
+}>`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-width: ${theme.atoms.layout.desktop.containerWidth};
+  flex-flow: ${({ orientation }) =>
+    orientation === "horizontal" ? "row nowrap" : "column nowrap"};
+  align-items: ${({ orientation }) =>
+    orientation === "horizontal" ? "center" : "left"};
+  min-height: 60px;
+  max-width: ${({ theme }) => theme.atoms.layout.desktop.containerWidth};
   position: sticky;
   ${NavItem} {
     color: ${props =>
-      props.dark ? theme.atoms.colors.dark : theme.atoms.colors.grey};
+      props.dark
+        ? props.theme.atoms.colors.dark
+        : props.theme.atoms.colors.grey};
     &:hover {
-      color: ${theme.atoms.colors.primary};
+      color: ${({ theme }) => theme.atoms.colors.primary};
       cursor: pointer;
     }
   }

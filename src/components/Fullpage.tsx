@@ -2,32 +2,29 @@ import * as React from "react"
 import { useLayoutEffect, useRef, useState } from "react"
 import * as ReactFullpage from "@fullpage/react-fullpage"
 
+const SEL = "custom-section"
+const SECTION_SEL = `.${SEL}`
+
 export const Fullpage = ({ children, handleUpdateIndex }) => {
   const onLeave = (origin, destination, direction) => {
-    const { index } = destination
-    console.log(index)
-
-    handleUpdateIndex(index)
+    console.log("onLeave", { origin, destination, direction })
+    // arguments are mapped in order of fullpage.js callback arguments do something
+    // with the event
   }
+
   return (
     <ReactFullpage
-      scrollingSpeed={700} /* Options here */
-      scrollOverflow
+      debug /* Debug logging */
+      // Required when using extensions
+      // pluginWrapper={pluginWrapper}
+      // fullpage options
+      licenseKey={"YOUR_KEY_HERE"} // Get one from https://alvarotrigo.com/fullPage/pricing/
       navigation
-      easing="ease"
-      css3
+      anchors={["firstPage", "secondPage", "thirdPage"]}
+      sectionSelector={SECTION_SEL}
       onLeave={onLeave}
-      render={({ state, fullpageApi }) => {
-        return (
-          <ReactFullpage.Wrapper>
-            {children.map(({ child }, i) => (
-              <div key={i} className="section">
-                {child}
-              </div>
-            ))}
-          </ReactFullpage.Wrapper>
-        )
-      }}
+      // sectionsColor={state.sectionsColor}
+      render={comp => <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>}
     />
   )
 }

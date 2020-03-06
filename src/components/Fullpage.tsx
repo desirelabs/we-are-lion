@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import * as ReactFullpage from "@fullpage/react-fullpage"
 
 export const Fullpage = ({ children, handleUpdateIndex }) => {
@@ -19,7 +20,7 @@ export const Fullpage = ({ children, handleUpdateIndex }) => {
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
-            {children.map((child, i) => (
+            {children.map(({ child }, i) => (
               <div key={i} className="section">
                 {child}
               </div>

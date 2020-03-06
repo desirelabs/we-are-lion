@@ -1,18 +1,13 @@
 import styled from "styled-components"
-import theme from "../theme"
 
-export const Header = styled.header<{ isClear?: boolean }>`
+export const Header = styled.header<{isClear: boolean}>`
   max-height: 75px;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 1;
   transition: all 0.3s ease-in-out;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background-color: #fff;
 `
 
 export const Navigation = styled.nav`
@@ -20,7 +15,7 @@ export const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: ${theme.atoms.layout.desktop.containerWidth};
+  max-width: 1170px;
   width: 100%;
-  margin: 15px auto;
+  margin: 5px auto;
 `

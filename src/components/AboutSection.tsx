@@ -18,13 +18,11 @@ export const AboutSection = () => {
           <Row>
             <Col col={6}>
               <GridBG colored="WHITE">
-                <Text decorated={true}>
-                  <blockquote>
-                    "Chaque profession possède ses propres problématiques.
-                    Produire une application ne doit pas en être une
-                    supplémentaire."
-                  </blockquote>
-                </Text>
+                <blockquote>
+                  "Chaque profession possède ses propres problématiques.
+                  Produire une application ne doit pas en être une
+                  supplémentaire."
+                </blockquote>
               </GridBG>
             </Col>
             <Col col={6}>
@@ -43,14 +41,12 @@ export const AboutSection = () => {
             </Col>
             <Col col={6}>
               <GridBG colored="WHITE">
-                <Text decorated={true}>
                   <blockquote>
                     "Nous sommes convaincus qu’une expérience visuelle vaut plus
                     que mille mots. Nous plaçons la création visuelle et
                     l’expérience utilisateur au premier plan de nos
                     réalisations. La technique sert de fondations à celle-ci."
                   </blockquote>
-                </Text>
               </GridBG>
             </Col>
           </Row>

@@ -9,7 +9,7 @@ import { SectionTitle } from "../components/ui/Title"
 export default () => {
   return (
     <Layout isClear={true}>
-      <Hero image="/img/hero.jpg">
+      <Hero video="/videos/particles.mp4">
         <HeroText>We are Lion</HeroText>
         <HeroSubText>Agence créative</HeroSubText>
         <SocialBar />

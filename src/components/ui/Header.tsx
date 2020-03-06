@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Header = styled.header`
+export const Header = styled.header<{isClear: boolean}>`
   max-height: 75px;
   width: 100%;
   position: fixed;

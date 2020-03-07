@@ -1,39 +1,54 @@
-import * as React from "react"
-import { Layout } from "../components/ui/Layout"
-import { Hero, HeroText, HeroSubText } from "../components/ui/Hero"
-import { SocialBar } from "../components/ui/SocialBar"
-import { AboutSection } from "../components/AboutSection"
-import { PortfolioSection } from "../components/PortfolioSection"
-import { SectionTitle } from "../components/ui/Title"
-import { Fullpage } from "../components/Fullpage"
+import * as React from "react";
+import { Layout } from "../components/ui/Layout";
+import { Hero, HeroText, HeroSubText } from "../components/ui/Hero";
+import { SocialBar } from "../components/ui/SocialBar";
+import { AboutSection } from "../components/AboutSection";
+import { PortfolioSection } from "../components/PortfolioSection";
+import { SectionTitle } from "../components/ui/Title";
+import ReactFullpage from "../components/ReactFullpage";
+import { useState } from "react";
 
 export default () => {
-  const handleUpdateIndex = (index: any) => console.log(index)
+  const [index, setIndex] = useState(0);
+  const [isClear, setClear] = useState(true);
+  const handleUpdateIndex = (i: any) => {
+    setIndex(index);
+    setClear(i === 0);
+  };
+
   return (
-    <Layout isClear={true}>
-      <Fullpage handleUpdateIndex={handleUpdateIndex}>
-        <div className="custom-section">
+    <Layout isClear={isClear}>
+      <ReactFullpage handleUpdateIndex={handleUpdateIndex}>
+        <div className="section">
           <Hero video="/videos/particles.mp4">
             <HeroText>We are Lion</HeroText>
             <HeroSubText>Agence créative</HeroSubText>
             <SocialBar />
           </Hero>
         </div>
-        <div className="custom-section">
+        <div className="section">
           <SectionTitle>Notre philosophie</SectionTitle>
           <AboutSection />
         </div>
-        {/*<SectionTitle>Au service de votre réussite</SectionTitle>*/}
-        {/*<SectionTitle>Notre expertise technique</SectionTitle>*/}
-        {/*<SectionTitle>Des résultats meusurables</SectionTitle>*/}
-        <div className="custom-section">
+        <div className="section">
+          <SectionTitle>Au service de votre réussite</SectionTitle>
+        </div>
+        <div className="section">
+          <SectionTitle>Notre expertise technique</SectionTitle>
+        </div>
+        <div className="section">
+          <SectionTitle>Des résultats meusurables</SectionTitle>
+        </div>
+        <div className="section">
           <SectionTitle>Des partenaires satisfaits</SectionTitle>
           <PortfolioSection />
         </div>
-        {/*<SectionTitle>*/}
-        {/*  Une agence locale à dimension internationale*/}
-        {/*</SectionTitle>*/}
-      </Fullpage>
+        <div className="section">
+          <SectionTitle>
+            Une agence locale à dimension internationale
+          </SectionTitle>
+        </div>
+      </ReactFullpage>
     </Layout>
-  )
-}
+  );
+};

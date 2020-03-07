@@ -5,7 +5,7 @@ import { SocialBar } from "../components/ui/SocialBar";
 import { AboutSection } from "../components/AboutSection";
 import { PortfolioSection } from "../components/PortfolioSection";
 import { SectionTitle } from "../components/ui/Title";
-import ReactFullpage from "../components/ReactFullpage";
+import ReactFullpage from "../libraries/ReactScrollPage";
 import { useState } from "react";
 
 export default () => {
@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <Layout isClear={isClear}>
-      <ReactFullpage handleUpdateIndex={handleUpdateIndex}>
+      <ReactFullpage handleUpdateIndex={handleUpdateIndex} scroll={true}>
         <div className="section">
           <Hero video="/videos/particles.mp4">
             <HeroText>We are Lion</HeroText>

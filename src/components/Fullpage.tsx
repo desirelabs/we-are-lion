@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from "react";
 // import * as ReactFullpage from "@fullpage/react-fullpage"
-import ReactFullpage from "./ReactFullpage"
+import ReactFullpage from "./ReactFullpage";
 
 export const Fullpage = ({ children, handleUpdateIndex }) => {
   const onLeave = (origin, destination, direction) => {
-    console.log("onLeave", { origin, destination, direction })
-  }
+    console.log("onLeave", { origin, destination, direction });
+  };
 
   return (
     <ReactFullpage
@@ -25,5 +25,5 @@ export const Fullpage = ({ children, handleUpdateIndex }) => {
         </div>
       ))}
     </ReactFullpage>
-  )
-}
+  );
+};

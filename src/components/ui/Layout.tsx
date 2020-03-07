@@ -41,7 +41,7 @@ export const Layout = ({
       <Header isClear={isClear}>
         <Navigation>
           <Logo src="/img/logo-we-are-lion.svg" height="70" />
-          <Menu dark />
+          <Menu isClear={isClear} />
         </Navigation>
       </Header>
       {React.Children.map(children, (child, i) =>

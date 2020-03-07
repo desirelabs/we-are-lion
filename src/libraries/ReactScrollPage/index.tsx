@@ -1,12 +1,14 @@
 import * as React from "react";
 import { useEffect, useLayoutEffect, useState } from "react";
 
-const ReactFullpage = ({
+const Index = ({
   children,
-  handleUpdateIndex
+  handleUpdateIndex,
+  scroll = false
 }: {
   children: any;
   handleUpdateIndex: (index: any) => void;
+  scroll: boolean;
 }) => {
   const [index, setIndex] = useState(0);
   let childrenRefs: { [id: number]: HTMLElement } = {};
@@ -16,13 +18,21 @@ const ReactFullpage = ({
     childrenRefs[index] = el;
   };
 
-  const handleScroll = (e: Event) => {
+  const handleIndexPosition = () => {
     const scrollPos: number = window.scrollY;
     const element = Object.values(offsets).findIndex(
       entry => entry >= scrollPos
     );
     setIndex(element);
     handleUpdateIndex(element);
+  };
+
+  const handleScroll = (e: Event) => {
+    if (scroll) {
+      e.preventDefault();
+    }
+
+    handleIndexPosition();
   };
 
   const getChildrenBreakpoints = () => {
@@ -45,13 +55,12 @@ const ReactFullpage = ({
     return () => window.removeEventListener("scroll", e => handleScroll(e));
   }, []);
 
-  return (
-    <>
-      {React.Children.toArray(children).map((child: any, i) =>
-        React.cloneElement(child, { key: i, ref: setChildRef(i) })
-      )}
-    </>
-  );
+  const renderElements = () =>
+    React.Children.toArray(children).map((child: any, i) =>
+      React.cloneElement(child, { key: i, ref: setChildRef(i) })
+    );
+
+  return <>{renderElements()}</>;
 };
 
-export default ReactFullpage;
+export default Index;

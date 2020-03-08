@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const NavItem = styled.span`
   padding: 0 9px;
@@ -13,31 +13,26 @@ export const NavItem = styled.span`
     color: ${({ theme }) => theme.atoms.colors.primary};
     cursor: pointer;
   }
-`
+`;
 
-export const FooterNavigation = ""
+export const FooterNavigation = "";
 
 export const Navigation = styled.nav<{
-  dark?: boolean
-  orientation: "vertical" | "horizontal"
+  isClear: boolean;
 }>`
   display: flex;
   justify-content: space-between;
-  flex-flow: ${({ orientation }) =>
-    orientation === "horizontal" ? "row nowrap" : "column nowrap"};
-  align-items: ${({ orientation }) =>
-    orientation === "horizontal" ? "center" : "left"};
+  flex-flow: row nowrap;
+  align-items: center;
   min-height: 60px;
   max-width: ${({ theme }) => theme.atoms.layout.desktop.containerWidth};
   position: sticky;
   ${NavItem} {
-    color: ${props =>
-      props.dark
-        ? props.theme.atoms.colors.dark
-        : props.theme.atoms.colors.grey};
+    color: ${({ isClear, theme }) =>
+      isClear ? theme.atoms.colors.white : theme.atoms.colors.grey};
     &:hover {
       color: ${({ theme }) => theme.atoms.colors.primary};
       cursor: pointer;
     }
   }
-`
+`;

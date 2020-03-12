@@ -1,6 +1,5 @@
 import * as React from "react";
-// import * as ReactFullpage from "@fullpage/react-fullpage"
-import ReactFullpage from "./ReactFullpage";
+import ReactFullpage from "@fullpage/react-fullpage";
 
 export const Fullpage = ({ children, handleUpdateIndex }) => {
   const onLeave = (origin, destination, direction) => {
@@ -9,21 +8,24 @@ export const Fullpage = ({ children, handleUpdateIndex }) => {
 
   return (
     <ReactFullpage
-    // debug={true}
-    // licenseKey={"YOUR_KEY_HERE"}
-    // sectionSelector=".section"
-    // scrollingSpeed={700} /* Options here */
-    // scrollOverflow={true}
-    // navigation={true}
-    // easing="ease"
-    // css3={true}
-    // onLeave={onLeave}
-    >
-      {children.map(({ child }, i) => (
-        <div key={i} className="section">
-          {child}
-        </div>
-      ))}
-    </ReactFullpage>
+      licenseKey={"D439ACCB-C54B4528-8C740546-DCC0E4E1"}
+      sectionSelector=".section"
+      scrollingSpeed={700}
+      pluginWrapper={() => require("fullpage.js/vendors/scrolloverflow")}
+      scrollOverflow={true}
+      navigation={true}
+      easing="ease"
+      css3={true}
+      onLeave={onLeave}
+      render={() => (
+        <ReactFullpage.Wrapper>
+          {React.Children.map(children, (child, i) => (
+            <div key={i} className="section">
+              {child}
+            </div>
+          ))}
+        </ReactFullpage.Wrapper>
+      )}
+    />
   );
 };

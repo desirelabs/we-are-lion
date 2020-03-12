@@ -5,6 +5,8 @@ export const Header = styled.header<{ isClear: boolean }>`
   width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
+  padding: 0 60px;
   z-index: 1;
   transition: all 0.3s ease-in-out;
   background-color: ${({ isClear }) => (isClear ? "transparent" : "#fff")};
@@ -15,7 +17,7 @@ export const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1170px;
+  max-width: 100%;
   width: 100%;
   margin: 5px auto;
 `;

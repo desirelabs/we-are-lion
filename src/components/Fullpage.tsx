@@ -8,7 +8,7 @@ export const Fullpage = ({ children, handleUpdateIndex }) => {
 
   return (
     <ReactFullpage
-      licenseKey={"YOUR_KEY_HERE"}
+      licenseKey={"D439ACCB-C54B4528-8C740546-DCC0E4E1"}
       sectionSelector=".section"
       scrollingSpeed={700}
       pluginWrapper={() => require("fullpage.js/vendors/scrolloverflow")}

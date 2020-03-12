@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Layout } from "../components/ui/Layout";
-import { Hero, HeroText, HeroSubText } from "../components/ui/Hero";
-import { SocialBar } from "../components/ui/SocialBar";
-import { AboutSection } from "../components/AboutSection";
-import { PortfolioSection } from "../components/PortfolioSection";
-import { SectionTitle } from "../components/ui/Title";
-import ReactFullpage from "../libraries/ReactScrollPage";
 import { useState } from "react";
+import { Fullpage } from "../components/Fullpage";
+import { HomeSlide1 } from "../components/Homepage/HomeSlide1";
+import { HomeSlide2 } from "../components/Homepage/HomeSlide2";
+import { HomeSlide3 } from "../components/Homepage/HomeSlide3";
+import { HomeSlide4 } from "../components/Homepage/HomeSlide4";
+import { HomeSlide5 } from "../components/Homepage/HomeSlide5";
 
 export default () => {
   const [index, setIndex] = useState(0);
@@ -18,37 +18,13 @@ export default () => {
 
   return (
     <Layout isClear={isClear}>
-      <ReactFullpage handleUpdateIndex={handleUpdateIndex} scroll={true}>
-        <div className="section">
-          <Hero video="/videos/particles.mp4">
-            <HeroText>We are Lion</HeroText>
-            <HeroSubText>Agence créative</HeroSubText>
-            <SocialBar />
-          </Hero>
-        </div>
-        <div className="section">
-          <SectionTitle>Notre philosophie</SectionTitle>
-          <AboutSection />
-        </div>
-        <div className="section">
-          <SectionTitle>Au service de votre réussite</SectionTitle>
-        </div>
-        <div className="section">
-          <SectionTitle>Notre expertise technique</SectionTitle>
-        </div>
-        <div className="section">
-          <SectionTitle>Des résultats meusurables</SectionTitle>
-        </div>
-        <div className="section">
-          <SectionTitle>Des partenaires satisfaits</SectionTitle>
-          <PortfolioSection />
-        </div>
-        <div className="section">
-          <SectionTitle>
-            Une agence locale à dimension internationale
-          </SectionTitle>
-        </div>
-      </ReactFullpage>
+      <Fullpage handleUpdateIndex={handleUpdateIndex}>
+        <HomeSlide1 />
+        <HomeSlide2 />
+        <HomeSlide3 />
+        <HomeSlide4 />
+        <HomeSlide5 />
+      </Fullpage>
     </Layout>
   );
 };

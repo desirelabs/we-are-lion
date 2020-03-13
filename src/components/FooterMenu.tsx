@@ -1,21 +1,9 @@
 import * as React from "react";
 import { Navigation, NavItem } from "./ui/Navigation";
-import { Link as GLink } from "gatsby";
-import styled from "styled-components";
+import { Link } from "gatsby";
 
-const Fixed = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-`;
-
-const Link = styled(GLink)`
-  text-decoration: none;
-`;
-
-export const Menu = ({ isClear }: { isClear?: boolean }) => (
-  <Navigation isClear={isClear}>
+export const FooterMenu = ({ isClear, column }) => (
+  <Navigation isClear={isClear} column={column}>
     <Link to="/">
       <NavItem>Accueil</NavItem>
     </Link>

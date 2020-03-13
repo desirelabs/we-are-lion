@@ -1,34 +1,33 @@
-import styled from "styled-components"
-import theme from "../theme"
+import styled from "styled-components";
 
-export const NavItem = styled.a`
+export const NavItem = styled.span`
   padding: 0 9px;
-  color: #c4c4c4;
-  font-family: "Montserrat";
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
-  font-weight: 700;
-  line-height: 63px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-transform: uppercase;
-  transition: color 0.25s ease-in-out;
+  color: ${({ theme }) => theme.atoms.colors.grey};
   &:hover {
-    color: ${theme.atoms.colors.primary};
+    color: ${({ theme }) => theme.atoms.colors.primary};
     cursor: pointer;
   }
-`
+`;
 
-export const Navigation = styled.nav<{ dark?: boolean }>`
-  max-height: 60px;
+export const FooterNavigation = "";
+
+export const Navigation = styled.nav<{
+  isClear: boolean;
+  column?: boolean;
+}>`
   display: flex;
   justify-content: space-between;
+  flex-flow: ${({ column }) => (column ? "column nowrap" : "row nowrap")};
   align-items: center;
-  max-width: ${theme.atoms.layout.desktop.containerWidth};
+  min-height: 60px;
+  max-width: ${({ theme }) => theme.atoms.layout.desktop.containerWidth};
   position: sticky;
-  ${NavItem} {
-    color: ${props =>
-      props.dark ? theme.atoms.colors.dark : theme.atoms.colors.grey};
-    &:hover {
-      color: ${theme.atoms.colors.primary};
-      cursor: pointer;
-    }
-  }
-`
+`;

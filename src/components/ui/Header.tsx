@@ -1,26 +1,23 @@
-import styled from "styled-components"
-import theme from "../theme"
+import styled from "styled-components";
 
-export const Header = styled.header<{ isClear?: boolean }>`
+export const Header = styled.header<{ isClear: boolean }>`
   max-height: 75px;
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 60px;
   z-index: 1;
   transition: all 0.3s ease-in-out;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-`
+  background-color: ${({ isClear }) => (isClear ? "transparent" : "#fff")};
+`;
 
 export const Navigation = styled.nav`
   min-height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: ${theme.atoms.layout.desktop.containerWidth};
+  max-width: 100%;
   width: 100%;
-  margin: 15px auto;
-`
+  margin: 5px auto;
+`;

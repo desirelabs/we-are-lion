@@ -1,32 +1,31 @@
-import * as React from "react"
-import * as ReactFullpage from "@fullpage/react-fullpage"
+import * as React from "react";
+import ReactFullpage from "@fullpage/react-fullpage";
 
 export const Fullpage = ({ children, handleUpdateIndex }) => {
   const onLeave = (origin, destination, direction) => {
-    const { index } = destination
-    console.log(index)
+    console.log("onLeave", { origin, destination, direction });
+  };
 
-    handleUpdateIndex(index)
-  }
   return (
     <ReactFullpage
-      scrollingSpeed={700} /* Options here */
-      scrollOverflow
-      navigation
+      licenseKey={"D439ACCB-C54B4528-8C740546-DCC0E4E1"}
+      sectionSelector=".section"
+      scrollingSpeed={700}
+      pluginWrapper={() => require("fullpage.js/vendors/scrolloverflow")}
+      scrollOverflow={true}
+      navigation={true}
       easing="ease"
-      css3
+      css3={true}
       onLeave={onLeave}
-      render={({ state, fullpageApi }) => {
-        return (
-          <ReactFullpage.Wrapper>
-            {children.map((child, i) => (
-              <div key={i} className="section">
-                {child}
-              </div>
-            ))}
-          </ReactFullpage.Wrapper>
-        )
-      }}
+      render={() => (
+        <ReactFullpage.Wrapper>
+          {React.Children.map(children, (child, i) => (
+            <div key={i} className="section">
+              {child}
+            </div>
+          ))}
+        </ReactFullpage.Wrapper>
+      )}
     />
-  )
-}
+  );
+};

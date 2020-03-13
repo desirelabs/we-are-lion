@@ -17,8 +17,6 @@ export const NavItem = styled.span`
   }
 `;
 
-export const FooterNavigation = "";
-
 export const Navigation = styled.nav<{
   isClear: boolean;
   column?: boolean;

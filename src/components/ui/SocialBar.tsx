@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const SocialBar = styled.div`
   height: 84px;
@@ -12,4 +12,4 @@ export const SocialBar = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-`
+`;

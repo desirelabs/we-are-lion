@@ -1,8 +1,8 @@
-import * as React from "react"
-import { Layout } from "../components/ui/Layout"
+import * as React from "react";
+import { Layout } from "../components/ui/Layout";
 
 export default () => (
-  <Layout>
+  <Layout isClear={true}>
     <h1>A propos</h1>
   </Layout>
-)
+);

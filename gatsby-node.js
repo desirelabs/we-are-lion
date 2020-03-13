@@ -5,10 +5,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         rules: [
           {
             test: /@fullpage/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
+            use: loaders.null()
+          }
+        ]
+      }
+    });
   }
-}
+};

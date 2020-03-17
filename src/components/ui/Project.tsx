@@ -1,5 +1,5 @@
-import * as React from "react"
-import styled from "styled-components"
+import * as React from "react";
+import styled from "styled-components";
 
 export const Description = styled.div`
   font-family: Montserrat, sans-serif;
@@ -8,7 +8,7 @@ export const Description = styled.div`
   line-height: 26.04px;
   text-align: center;
   color: #fff;
-`
+`;
 
 export const Title = styled.h3`
   margin: 0;
@@ -19,7 +19,7 @@ export const Title = styled.h3`
   line-height: 34.06px;
   text-transform: uppercase;
   color: #fff;
-`
+`;
 
 export const Content = styled.div`
   margin: auto;
@@ -29,7 +29,7 @@ export const Content = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const Figure = styled.div<{ image: string }>`
   position: absolute;
@@ -57,7 +57,7 @@ const Figure = styled.div<{ image: string }>`
       ${({ theme }) => theme.atoms.colors.lightGrey} 100%
     );
   }
-`
+`;
 
 export const Wrapper = styled.div<{ passThrough?: boolean; higher?: boolean }>`
   position: relative;
@@ -98,20 +98,20 @@ export const Wrapper = styled.div<{ passThrough?: boolean; higher?: boolean }>`
       ${({ theme }) => theme.atoms.colors.primary} 100%
     );
   }
-`
+`;
 
 export const PortfolioProject = ({
   title,
   description,
   figure,
   passThrough,
-  higher,
+  higher
 }: {
-  title?: string
-  description?: string
-  figure: string
-  passThrough?: boolean
-  higher?: boolean
+  title?: string;
+  description?: string;
+  figure: string;
+  passThrough?: boolean;
+  higher?: boolean;
 }) => (
   <Wrapper passThrough={passThrough} higher={higher}>
     <Figure image={figure} />
@@ -122,4 +122,4 @@ export const PortfolioProject = ({
       </Content>
     )}
   </Wrapper>
-)
+);

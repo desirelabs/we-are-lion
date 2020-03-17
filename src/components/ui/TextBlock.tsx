@@ -1,7 +1,7 @@
-import * as React from "react"
-import styled from "styled-components"
+import * as React from "react";
+import styled from "styled-components";
 
-export const TextBlockText = styled.h3``
+export const TextBlockText = styled.h3``;
 
 export const TextBlockWrapper = styled.div<{ colored: boolean }>`
   width: 244px;
@@ -52,7 +52,7 @@ export const TextBlockWrapper = styled.div<{ colored: boolean }>`
         ? `color: ${({ theme }) => theme.atoms.colors.primary}`
         : `color: ${({ theme }) => theme.atoms.colors.dark}`};
   }
-`
+`;
 
 export const TextBlock = ({ text, colored = false }) => (
   <TextBlockWrapper colored={colored}>
@@ -65,4 +65,4 @@ export const TextBlock = ({ text, colored = false }) => (
       ))}
     </TextBlockText>
   </TextBlockWrapper>
-)
+);

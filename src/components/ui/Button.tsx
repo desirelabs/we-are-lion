@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Button as MaterialButton } from "@material-ui/core";
 
-export const Button = styled.button`
+export const Button = styled(MaterialButton)`
   width: 260px;
   height: 48px;
   border-radius: 24px;
@@ -19,7 +20,7 @@ export const Button = styled.button`
   letter-spacing: normal;
   color: ${({ theme }) => theme && theme.atoms.colors.white};
   cursor: pointer;
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   border: none;
   transition: all 0.3s ease-in-out;

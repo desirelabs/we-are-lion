@@ -3,7 +3,6 @@ import { Header, Navigation } from "./Header";
 import { Logo } from "./Logo";
 import { Menu } from "../Menu";
 import styled from "styled-components";
-import { FooterMenu } from "../FooterMenu";
 import { Footer } from "../Footer";
 
 export const Container = styled.div<{ fluid?: boolean }>`
@@ -36,6 +35,9 @@ export const Row = styled.div<{ valign?: boolean }>`
 const Main = styled.main`
   padding: 0 20px;
   position: relative;
+  @media (max-width: 767px) {
+    padding: 0 0;
+  }
 `;
 
 export const Layout = ({

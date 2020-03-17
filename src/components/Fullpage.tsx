@@ -7,25 +7,27 @@ export const Fullpage = ({ children, handleUpdateIndex }) => {
   };
 
   return (
-    <ReactFullpage
-      licenseKey={"D439ACCB-C54B4528-8C740546-DCC0E4E1"}
-      sectionSelector=".section"
-      scrollingSpeed={700}
-      pluginWrapper={() => require("fullpage.js/vendors/scrolloverflow")}
-      scrollOverflow={true}
-      navigation={true}
-      easing="ease"
-      css3={true}
-      onLeave={onLeave}
-      render={() => (
-        <ReactFullpage.Wrapper>
-          {React.Children.map(children, (child, i) => (
-            <div key={i} className="section">
-              {child}
-            </div>
-          ))}
-        </ReactFullpage.Wrapper>
-      )}
-    />
+    typeof window !== "undefined" && (
+      <ReactFullpage
+        licenseKey={"D439ACCB-C54B4528-8C740546-DCC0E4E1"}
+        sectionSelector=".section"
+        scrollingSpeed={700}
+        pluginWrapper={() => require("fullpage.js/vendors/scrolloverflow")}
+        scrollOverflow={true}
+        navigation={true}
+        easing="ease"
+        css3={true}
+        onLeave={onLeave}
+        render={() => (
+          <ReactFullpage.Wrapper>
+            {React.Children.map(children, (child, i) => (
+              <div key={i} className="section">
+                {child}
+              </div>
+            ))}
+          </ReactFullpage.Wrapper>
+        )}
+      />
+    )
   );
 };

@@ -10,6 +10,9 @@ export const Header = styled.header<{ isClear: boolean }>`
   z-index: 1;
   transition: all 0.3s ease-in-out;
   background-color: ${({ isClear }) => (isClear ? "transparent" : "#fff")};
+  @media (max-width: 767px) {
+    padding: 0 15px;
+  }
 `;
 
 export const Navigation = styled.nav`

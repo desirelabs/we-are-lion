@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useState } from "react";
 import { Layout } from "../components/ui/Layout";
 import * as Section from "../components/ui/Section";

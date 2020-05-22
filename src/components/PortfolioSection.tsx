@@ -1,7 +1,7 @@
 import { GridBG } from "./ui/GridBG";
 import { TextBlock } from "./ui/TextBlock";
 import * as Project from "./ui/Project";
-import * as React from "react";
+import React from "react";
 import { Col, Container, Row } from "./ui/Layout";
 
 export const PortfolioSection = () => (

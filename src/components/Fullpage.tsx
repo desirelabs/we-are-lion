@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 export const Fullpage = ({ children, handleUpdateIndex }) => {

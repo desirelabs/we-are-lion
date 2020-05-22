@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 export const Surface = props => {
   const { className, view, trbl, style, children, ...other } = props;

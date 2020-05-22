@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { easeQuadOut } from "d3-ease";
 import { Animate } from "react-move";
 import { interpolate } from "flubber";

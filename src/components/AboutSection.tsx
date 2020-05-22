@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { GridBG } from "./ui/GridBG";
 import { TextBlock } from "./ui/TextBlock";
 import { Title } from "./ui/Title";

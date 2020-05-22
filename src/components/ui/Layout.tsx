@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Header, Navigation } from "./Header";
 import { Logo } from "./Logo";
 import { Menu } from "../Menu";
@@ -65,7 +65,7 @@ export const Layout = ({
       )}
       <Footer>
         <Grid container alignItems="center" justify="center">
-          <Grid item xs={12} alignItems="center" justify="center">
+          <Grid item xs={12}>
             <Wrapper>
               <p style={{ textAlign: "center" }}>
                 {getYear()} &copy; We Are Lion

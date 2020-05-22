@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { MenuWrapper, NavItem } from "./ui/MenuWrapper";
 import { Link as GatsbyLink } from "gatsby";
 import styled, { css } from "styled-components";
@@ -146,12 +146,6 @@ export const Menu = ({ isClear }: { isClear?: boolean }) => {
         <Link to="/" onClick={e => handleToggle(e)}>
           <NavItem>Accueil</NavItem>
         </Link>
-        {/* <Link to="/about" onClick={e => handleToggle(e)}>
-          <NavItem>A propos</NavItem>
-        </Link>
-        <Link to="/blog" onClick={e => handleToggle(e)}>
-          <NavItem>Blog</NavItem>
-        </Link> */}
         <Link to="/contact" onClick={e => handleToggle(e)}>
           <NavItem>Contact</NavItem>
         </Link>

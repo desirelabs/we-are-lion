@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import * as Section from "../components/ui/Section";
 import { Layout } from "../components/ui/Layout";
 import { ContactForm } from "../components/ui/ContactForm";

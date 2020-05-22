@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 import { MenuLink } from "../Menu";
 
 export const NavItem = styled.span`
-  text-decoration: none;
   padding: 0 9px;
   font-family: Montserrat, sans-serif;
   font-size: 14px;

@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuWrapper, NavItem } from "./ui/MenuWrapper";
-import { Link as GatsbyLink } from "gatsby";
+import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 import { useEffect, useReducer } from "react";
 import { Icon } from "./ui/Icon";
@@ -9,7 +9,7 @@ import { Surface } from "./ui-utils/Surface";
 import { interpolate } from "flubber";
 import { easeQuadOut } from "d3-ease";
 
-export const Link = styled(GatsbyLink)`
+export const MenuLink = styled.span`
   text-decoration: none;
   @media (max-width: 767px) {
     padding: 30px;

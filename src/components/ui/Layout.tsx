@@ -48,6 +48,10 @@ export const Layout = ({
   children: any;
   isClear: any;
 }) => {
+  const getYear = () => {
+    const date = new Date();
+    return date.getUTCFullYear();
+  };
   return (
     <Main>
       <Header isClear={isClear}>
@@ -61,8 +65,12 @@ export const Layout = ({
       )}
       <Footer>
         <Grid container alignItems="center" justify="center">
-          <Grid item xs={12}>
-            <Wrapper>footer</Wrapper>
+          <Grid item xs={12} alignItems="center" justify="center">
+            <Wrapper>
+              <p style={{ textAlign: "center" }}>
+                {getYear()} &copy; We Are Lion
+              </p>
+            </Wrapper>
           </Grid>
         </Grid>
       </Footer>

@@ -6,7 +6,7 @@ import styled from "styled-components";
 const SlideWrapper = styled.div`
   flex-grow: 1;
   max-width: 1170px;
-  min-height: 100vh;
+  min-height: calc(100vh - 75px);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -21,11 +21,17 @@ const Side = styled.div<{ align?: Align }>`
   }
 `;
 
-export const Left = ({ children, align }) => (
+export const Left = ({ children, align }: { children: any; align?: Align }) => (
   <Side align={align}>{children}</Side>
 );
 
-export const Right = ({ children }) => <Side>{children}</Side>;
+export const Right = ({
+  children,
+  align
+}: {
+  children: any;
+  align?: Align;
+}) => <Side align={align}>{children}</Side>;
 
 export const Slide = ({ children }) => {
   return (

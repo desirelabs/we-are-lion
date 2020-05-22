@@ -9,7 +9,7 @@ export const Header = styled.header<{ isClear: boolean }>`
   padding: 0 60px;
   z-index: 1;
   transition: all 0.3s ease-in-out;
-  background-color: ${({ isClear }) => (isClear ? "transparent" : "#fff")};
+  background-color: ${({ isClear }) => (isClear ? "transparent" : "#fafafa")};
   @media (max-width: 767px) {
     padding: 0 15px;
   }

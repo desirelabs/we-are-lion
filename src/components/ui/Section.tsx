@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
   position: relative;
-  padding: 60px;
+  padding: 15px;
+  /* padding: 60px; */
 `;
 
 export const HeroTitle = styled.h1`

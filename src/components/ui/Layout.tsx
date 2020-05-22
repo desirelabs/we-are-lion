@@ -1,15 +1,15 @@
-import * as React from "react";
+import React from "react";
 import { Header, Navigation } from "./Header";
 import { Logo } from "./Logo";
 import { Menu } from "../Menu";
 import styled from "styled-components";
-import { FooterMenu } from "../FooterMenu";
 import { Footer } from "../Footer";
+import Grid from "@material-ui/core/Grid";
+import { Wrapper } from "./Section";
 
 export const Container = styled.div<{ fluid?: boolean }>`
   width: 100%;
   max-width: ${({ fluid }) => (fluid ? "100%" : "1170px")};
-  ${({ fluid }) => (fluid ? "margin: 0 15px" : "margin: 0 auto")};
   position: relative;
 `;
 
@@ -34,8 +34,11 @@ export const Row = styled.div<{ valign?: boolean }>`
 `;
 
 const Main = styled.main`
-  padding: 0 20px;
+  padding: 75px 20px 0;
   position: relative;
+  @media (max-width: 767px) {
+    padding: 75px 0 0;
+  }
 `;
 
 export const Layout = ({
@@ -45,6 +48,10 @@ export const Layout = ({
   children: any;
   isClear: any;
 }) => {
+  const getYear = () => {
+    const date = new Date();
+    return date.getUTCFullYear();
+  };
   return (
     <Main>
       <Header isClear={isClear}>
@@ -57,13 +64,15 @@ export const Layout = ({
         React.cloneElement(child, { key: i })
       )}
       <Footer>
-        <Container>
-          <Row>
-            <Col col={4}>left</Col>
-            <Col col={4}>center</Col>
-            <Col col={4}>right</Col>
-          </Row>
-        </Container>
+        <Grid container alignItems="center" justify="center">
+          <Grid item xs={12}>
+            <Wrapper>
+              <p style={{ textAlign: "center" }}>
+                {getYear()} &copy; We Are Lion
+              </p>
+            </Wrapper>
+          </Grid>
+        </Grid>
       </Footer>
     </Main>
   );

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Text = styled.p<{ decorated?: boolean }>`
   color: #3e3e3e;
@@ -13,4 +13,4 @@ export const Text = styled.p<{ decorated?: boolean }>`
     margin-bottom: 30px;
     background-color: ${({ theme }) => theme.atoms.colors.primary};
   }
-`
+`;

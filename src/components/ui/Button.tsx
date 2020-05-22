@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Button as MaterialButton } from "@material-ui/core";
 
-export const Button = styled(MaterialButton)`
+export const Button = styled.button`
+  text-transform: uppercase;
   width: 260px;
   height: 48px;
   border-radius: 24px;
@@ -26,6 +27,7 @@ export const Button = styled(MaterialButton)`
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
   &:before {
     transition: all 0.3s ease-in-out;
     content: "";

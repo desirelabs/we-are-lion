@@ -5,6 +5,7 @@ import * as Section from "../components/ui/Section";
 import { Slide, Left, Right } from "../components/Slide";
 import { Illustration } from "../components/ui/Illustration";
 import { Button } from "../components/ui/Button";
+import { Link } from "gatsby";
 
 export default () => {
   const [isClear, setClear] = useState(false);
@@ -16,7 +17,9 @@ export default () => {
           <Section.HeroTitle>Lion</Section.HeroTitle>
           <Section.HeroTitle2>une agence web</Section.HeroTitle2>
           <Section.HeroTitle3>une expertise totale</Section.HeroTitle3>
-          <Button>Contactez-nous</Button>
+          <Link to="/contact">
+            <Button>Contactez-nous</Button>
+          </Link>
         </Left>
         <Right>
           <Illustration src="/img/start-up.svg" width="100%" />

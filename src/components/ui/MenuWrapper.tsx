@@ -26,6 +26,7 @@ const mobileMenuOpened = css`
 const mobileMenuClosed = css`
   width: 5px;
   height: 5px;
+  overflow: hidden;
   border-radius: 50%;
   a {
     display: none;
@@ -59,7 +60,8 @@ export const MenuWrapper = styled.nav<{
     flex-flow: column nowrap;
     align-items: center;
     max-width: 100%;
-    ${({ toggle }) => (toggle ? mobileMenuOpened : mobileMenuClosed)}
+    display: ${({ toggle }) => (toggle ? "flex" : "none")};
+    background-color: ${props => props.theme.atoms.colors.primary};
     a {
       padding: 30px;
       span {

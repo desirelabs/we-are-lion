@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Button as MaterialButton } from "@material-ui/core";
 
-export const Button = styled.button`
+export const Button = styled.button<{ isFull?: boolean }>`
   text-transform: uppercase;
-  width: 260px;
+  width: ${({ isFull }) => (isFull ? "100%" : "260px")};
   height: 48px;
   border-radius: 24px;
   background-image: linear-gradient(

@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Footer } from "../Footer";
 import Grid from "@material-ui/core/Grid";
 import { Wrapper } from "./Section";
+import { Link } from "gatsby";
 
 export const Container = styled.div<{ fluid?: boolean }>`
   width: 100%;
@@ -56,7 +57,9 @@ export const Layout = ({
     <Main>
       <Header isClear={isClear}>
         <Navigation>
-          <Logo src="/img/logo-we-are-lion.svg" height="70" />
+          <Link to="/">
+            <Logo src="/img/logo-we-are-lion.svg" height="70" />
+          </Link>
           <Menu isClear={isClear} />
         </Navigation>
       </Header>

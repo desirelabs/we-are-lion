@@ -1,7 +1,7 @@
 import React from "react";
 import * as Section from "../components/ui/Section";
 import { Layout } from "../components/ui/Layout";
-import { ContactForm } from "../components/ui/ContactForm";
+import { ContactForm } from "../components/ContactForm";
 import { Slide, Left, Right } from "../components/Slide";
 import styled, { ThemeProps } from "styled-components";
 

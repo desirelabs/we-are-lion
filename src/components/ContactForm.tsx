@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "./Button";
+import { Button } from "./ui/Button";
 
 const useStyles = makeStyles({
   root: {
@@ -92,7 +92,7 @@ export const ContactForm = () => {
         onChange={handleChange}
         className={classes.field}
       />{" "}
-      <Button type="submit">Envoyer</Button>
+      <Button type="submit" isFull>Envoyer</Button>
     </form>
   );
 };

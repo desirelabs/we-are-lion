@@ -2,6 +2,8 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Wrapper } from "./ui/Section";
 import styled from "styled-components";
+import Hyphenated from "react-hyphen";
+import fr from "hyphenated-fr";
 
 const SlideWrapper = styled.div`
   flex-grow: 1;
@@ -39,20 +41,24 @@ export const Slide = ({ children }) => {
       <Grid container alignItems="center" justify="center">
         <Grid item md={6} xs={12}>
           <Wrapper>
-            {React.Children.map(children, (child, i) => {
-              return (
-                child.type === Left && React.cloneElement(child, { key: i })
-              );
-            })}
+            <Hyphenated language={fr}>
+              {React.Children.map(children, (child, i) => {
+                return (
+                  child.type === Left && React.cloneElement(child, { key: i })
+                );
+              })}
+            </Hyphenated>
           </Wrapper>
         </Grid>
         <Grid item md={6} xs={12}>
           <Wrapper>
-            {React.Children.map(children, (child, i) => {
-              return (
-                child.type === Right && React.cloneElement(child, { key: i })
-              );
-            })}
+            <Hyphenated language={fr}>
+              {React.Children.map(children, (child, i) => {
+                return (
+                  child.type === Right && React.cloneElement(child, { key: i })
+                );
+              })}
+            </Hyphenated>
           </Wrapper>
         </Grid>
       </Grid>

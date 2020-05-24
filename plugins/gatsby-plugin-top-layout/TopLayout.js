@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import theme from "../../src/theme";
 import { ThemeProvider } from "styled-components";
+import { MuiThemeProvider } from "@material-ui/core/styles";
 
 export default function TopLayout(props) {
   return (

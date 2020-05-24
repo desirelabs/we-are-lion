@@ -9,7 +9,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -p 8000",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
@@ -20,6 +20,7 @@
     "gatsby": "^2.19.7",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-styled-components": "^3.3.2",
     "gatsby-plugin-typescript": "^2.1.27",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

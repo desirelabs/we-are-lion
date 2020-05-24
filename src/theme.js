@@ -1,6 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-const theme = createMuiTheme({
+const bareTheme = {
   atoms: {
     layout: {
       desktop: {
@@ -28,6 +28,8 @@ const theme = createMuiTheme({
       lightGrey: "#e6e6e6"
     }
   }
-});
+};
+
+const theme = createMuiTheme(bareTheme);
 
 export default theme;

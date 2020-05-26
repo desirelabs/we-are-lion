@@ -18,7 +18,7 @@ export default ({ data }) => {
             <Post.Wrapper key={id}>
               <Post.Title>{title}</Post.Title>
               <Post.Meta>
-                Écrit par {par} - {getDate(date)}
+                Écrit par {par} - {date}
               </Post.Meta>
               <Post.Content
                 dangerouslySetInnerHTML={{ __html: html }}
@@ -39,7 +39,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date
+            date(locale: "fr_FR", formatString: "DD MMMM YYYY")
             par
           }
           excerpt(pruneLength: 300)

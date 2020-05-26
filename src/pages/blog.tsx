@@ -5,8 +5,6 @@ import { Title } from "../components/ui/Title";
 import * as Post from "../components/ui/Post";
 
 export default ({ data }) => {
-  const getDate = (date: string) => new Date(date).toLocaleDateString();
-
   return (
     <Layout isClear={false}>
       <Post.Posts>
@@ -18,7 +16,7 @@ export default ({ data }) => {
             <Post.Wrapper key={id}>
               <Post.Title>{title}</Post.Title>
               <Post.Meta>
-                Écrit par {par} - {getDate(date)}
+                Écrit par {par} - {date}
               </Post.Meta>
               <Post.Content
                 dangerouslySetInnerHTML={{ __html: html }}
@@ -39,7 +37,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date
+            date(locale: "fr_FR", formatString: "DD MMMM YYYY")
             par
           }
           excerpt(pruneLength: 300)

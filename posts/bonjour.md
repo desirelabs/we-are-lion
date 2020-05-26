@@ -4,6 +4,8 @@ date: "2020-05-26"
 par: "Franck"
 ---
 
+![Lancement de fusée](/img/posts/rocket-launch-liftoff.jpg)
+
 ## Bonjour !
 
 Aujourd'hui nous sommes heureux de vous dire **Bonjour** ! C'est un grand jour pour nous car après de nombreuses années, nous avons créé l'agence web Lion 🚀 !

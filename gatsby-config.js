@@ -5,7 +5,18 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `We Are Lion`
+  },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts/`
+      }
+    },
+    `gatsby-transformer-remark`,
     "gatsby-plugin-typescript",
     "gatsby-plugin-top-layout",
     {

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
+import Alert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "./ui/Button";
+import { Snackbar } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -20,11 +22,13 @@ const useStyles = makeStyles({
 });
 
 export const ContactForm = () => {
-  const [data, setDate] = useState({
+  const [data, setData] = useState({
     name: "",
     email: "",
     message: ""
   });
+
+  const [alert, setAlert] = useState({ message: null, type: null });
 
   const classes = useStyles();
 
@@ -34,65 +38,104 @@ export const ContactForm = () => {
       .join("&");
   };
 
+  const handleClear = () =>
+    setData({
+      name: "",
+      email: "",
+      message: ""
+    });
+
   const handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...data })
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .then(() => {
+        setAlert({ message: "Message envoyé avec succès !", type: "success" });
+        handleClear();
+      })
+      .catch(error =>
+        setAlert({ message: "Un problème est survenu.", type: "error" })
+      )
+      .finally(() => setTimeout(() => handleClose(), 6000));
 
     e.preventDefault();
   };
 
   const handleChange = e =>
-    setDate({ ...data, [e.target.name]: e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value });
 
   const { name, email, message } = data;
 
+  const handleClose = () => setAlert({ message: null, type: "success" });
+
   return (
-    <form
-      name="contact"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
-    >
-      {/* You still need to add the hidden input with the form name to your JSX form */}
-      <input type="hidden" name="form-name" value="contact" />{" "}
-      <TextField
-        type="text"
-        name="name"
-        value={name}
-        label="Nom"
-        variant="outlined"
-        color="secondary"
-        onChange={handleChange}
-        className={classes.field}
-      />
-      <TextField
-        type="email"
-        name="email"
-        value={email}
-        label="Email"
-        variant="outlined"
-        color="secondary"
-        onChange={handleChange}
-        className={classes.field}
-      />
-      <TextField
-        name="message"
-        value={message}
-        label="Message"
-        variant="outlined"
-        color="secondary"
-        multiline
-        rows={4}
-        onChange={handleChange}
-        className={classes.field}
-      />{" "}
-      <Button type="submit" isFull>Envoyer</Button>
-    </form>
+    <>
+      {alert && (
+        <Snackbar
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+          open={!!alert.message}
+          autoHideDuration={6000}
+          onClose={handleClose}
+        >
+          <Alert severity={alert.type}>{alert.message}</Alert>
+        </Snackbar>
+      )}
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
+      >
+        {/* You still need to add the hidden input with the form name to your JSX form */}
+        <input type="hidden" name="form-name" value="contact" />{" "}
+        <TextField
+          type="text"
+          name="name"
+          value={name}
+          label="Nom"
+          variant="outlined"
+          color="secondary"
+          onChange={handleChange}
+          required
+          className={classes.field}
+        />
+        <TextField
+          type="email"
+          name="email"
+          value={email}
+          label="Email"
+          variant="outlined"
+          color="secondary"
+          onChange={handleChange}
+          required
+          className={classes.field}
+        />
+        <TextField
+          name="message"
+          value={message}
+          label="Message"
+          variant="outlined"
+          color="secondary"
+          multiline
+          rows={4}
+          onChange={handleChange}
+          required
+          className={classes.field}
+        />{" "}
+        <Button
+          type="submit"
+          className="g-recaptcha"
+          data-sitekey="6Lcue_wUAAAAADc9KCpXvltQ2z7_X6dZQ7BZnhqP"
+          data-callback="handleSubmit"
+          data-action="submit"
+          isFull
+        >
+          Envoyer
+        </Button>
+      </form>
+    </>
   );
 };

@@ -5,8 +5,6 @@ import { Title } from "../components/ui/Title";
 import * as Post from "../components/ui/Post";
 
 export default ({ data }) => {
-  const getDate = (date: string) => new Date(date).toLocaleDateString();
-
   return (
     <Layout isClear={false}>
       <Post.Posts>

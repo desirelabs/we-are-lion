@@ -19,4 +19,13 @@ export const Meta = styled.small`
 export const Content = styled.div`
   font-family: Montserrat, sans-serif;
   font-size: 1.125rem;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    color: ${({ theme }) => theme && theme.atoms.colors.primary};
+    font-weight: bold;
+    text-decoration: none;
+  }
 `;

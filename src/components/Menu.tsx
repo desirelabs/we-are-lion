@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 import { Icon } from "./ui/Icon";
 
-
 export const MenuLink = styled.span`
   text-decoration: none;
   @media (max-width: 767px) {
@@ -100,6 +99,9 @@ export const Menu = ({ isClear }: { isClear?: boolean }) => {
       <MenuWrapper isClear={isClear} toggle={toggle} className="menu-wrapper">
         <Link to="/" onClick={e => handleToggle(e)}>
           <NavItem>Accueil</NavItem>
+        </Link>
+        <Link to="/blog" onClick={e => handleToggle(e)}>
+          <NavItem>Articles</NavItem>
         </Link>
         <Link to="/contact" onClick={e => handleToggle(e)}>
           <NavItem>Contact</NavItem>

@@ -7,6 +7,7 @@ import { Footer } from "../Footer";
 import Grid from "@material-ui/core/Grid";
 import { Wrapper } from "./Section";
 import { Link } from "gatsby";
+import { CookieBanner } from "../Cookie/CookieBanner";
 
 export const Container = styled.div<{ fluid?: boolean }>`
   width: 100%;
@@ -79,7 +80,7 @@ export const Layout = ({
           </Grid>
         </Footer>
       </Main>
-      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <CookieBanner />
     </>
   );
 };

@@ -54,29 +54,32 @@ export const Layout = ({
     return date.getUTCFullYear();
   };
   return (
-    <Main>
-      <Header isClear={isClear}>
-        <Navigation>
-          <Link to="/">
-            <Logo src="/img/logo-we-are-lion.svg" height="70" />
-          </Link>
-          <Menu isClear={isClear} />
-        </Navigation>
-      </Header>
-      {React.Children.map(children, (child, i) =>
-        React.cloneElement(child, { key: i })
-      )}
-      <Footer>
-        <Grid container alignItems="center" justify="center">
-          <Grid item xs={12}>
-            <Wrapper>
-              <p style={{ textAlign: "center" }}>
-                {getYear()} &copy; We Are Lion
-              </p>
-            </Wrapper>
+    <>
+      <Main>
+        <Header isClear={isClear}>
+          <Navigation>
+            <Link to="/">
+              <Logo src="/img/logo-we-are-lion.svg" height="70" />
+            </Link>
+            <Menu isClear={isClear} />
+          </Navigation>
+        </Header>
+        {React.Children.map(children, (child, i) =>
+          React.cloneElement(child, { key: i })
+        )}
+        <Footer>
+          <Grid container alignItems="center" justify="center">
+            <Grid item xs={12}>
+              <Wrapper>
+                <p style={{ textAlign: "center" }}>
+                  {getYear()} &copy; We Are Lion
+                </p>
+              </Wrapper>
+            </Grid>
           </Grid>
-        </Grid>
-      </Footer>
-    </Main>
+        </Footer>
+      </Main>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+    </>
   );
 };

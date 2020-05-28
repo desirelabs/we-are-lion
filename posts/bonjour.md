@@ -4,11 +4,7 @@ date: "2020-05-26"
 par: "Franck"
 ---
 
-<<<<<<< HEAD
-![Lancement de fusée](/img/posts/firework.jpg)
-=======
-![Lancement de fusée](/img/posts/rocket-launch-liftoff.jpg)
->>>>>>> feat: implement post featured image (#19)
+![Feux d'artifice](/img/posts/fireworks.jpg)
 
 ## Bonjour !
 

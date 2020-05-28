@@ -4,7 +4,7 @@ date: "2020-05-26"
 par: "Franck"
 ---
 
-![Lancement de fusée](/img/posts/rocket-launch-liftoff.jpg)
+![Feux d'artifice](/img/posts/fireworks.jpg)
 
 ## Bonjour !
 

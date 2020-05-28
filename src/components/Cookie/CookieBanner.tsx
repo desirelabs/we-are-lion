@@ -61,6 +61,11 @@ export const CookieBanner = () => {
       setConsent("unset");
     } else {
       setConsent(currentCookie);
+      if (currentCookie === "agree") {
+        ReactGA.initialize("UA-6203450-7", {
+          debug: "development" === process.env.NODE_ENV
+        });
+      }
     }
   };
 

@@ -131,7 +131,7 @@ export const ContactForm = () => {
           data-sitekey="6Lcue_wUAAAAADc9KCpXvltQ2z7_X6dZQ7BZnhqP"
           data-callback="handleSubmit"
           data-action="submit"
-          isFull
+          size="large"
         >
           Envoyer
         </Button>

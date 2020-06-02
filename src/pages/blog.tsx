@@ -31,13 +31,17 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark(limit: 1, sort: { fields: frontmatter___date }) {
+    allMarkdownRemark(
+      limit: 1
+      sort: { fields: frontmatter___date }
+      filter: { frontmatter: { categories: { in: "post" } } }
+    ) {
       edges {
         node {
           id
           frontmatter {
             title
-            date(locale: "fr_FR", formatString: "DD MMMM YYYY")
+            date
             par
           }
           excerpt(pruneLength: 300)

@@ -1,7 +1,17 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
-export const Fullpage = ({ children, handleUpdateIndex }) => {
+interface FullPage {
+  children: any;
+  handleUpdateIndex?: (index: number) => void;
+  navigation?: boolean;
+}
+
+export const Fullpage = ({
+  children,
+  handleUpdateIndex,
+  navigation
+}: FullPage) => {
   const onLeave = (origin, destination, direction) => {
     console.log("onLeave", { origin, destination, direction });
   };
@@ -14,14 +24,14 @@ export const Fullpage = ({ children, handleUpdateIndex }) => {
         scrollingSpeed={700}
         pluginWrapper={() => require("fullpage.js/vendors/scrolloverflow")}
         scrollOverflow={true}
-        navigation={true}
+        navigation={navigation || false}
         easing="ease"
         css3={true}
         onLeave={onLeave}
         render={() => (
           <ReactFullpage.Wrapper>
             {React.Children.map(children, (child, i) => (
-              <div key={i} className="section">
+              <div key={i} className="section" style={{ height: "auto" }}>
                 {child}
               </div>
             ))}

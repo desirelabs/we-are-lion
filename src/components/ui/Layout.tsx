@@ -36,7 +36,9 @@ export const Row = styled.div<{ valign?: boolean }>`
 `;
 
 const Main = styled.main`
-  padding: 75px 20px 0;
+  /* FIXME: gérer les espacements */
+  /* padding: 75px 20px 0; */
+  padding-top: 75px;
   position: relative;
   @media (max-width: 767px) {
     padding: 75px 0 0;

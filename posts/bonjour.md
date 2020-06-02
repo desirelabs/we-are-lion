@@ -2,6 +2,7 @@
 title: "Bienvenue chez Lion !"
 date: "2020-05-26"
 par: "Franck"
+categories: ["post"]
 ---
 
 ![Feux d'artifice](/img/posts/fireworks.jpg)

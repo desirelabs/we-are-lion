@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Text = styled.p<{ decorated?: boolean }>`
   color: #3e3e3e;
   font-family: Montserrat, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   &:before {
     ${({ decorated }) => decorated && `content: ""`};

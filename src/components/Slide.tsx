@@ -5,10 +5,11 @@ import styled from "styled-components";
 import Hyphenated from "react-hyphen";
 import fr from "hyphenated-fr";
 
-const SlideWrapper = styled.div`
+const SlideWrapper = styled.div<{ autoHeight?: boolean }>`
   flex-grow: 1;
   max-width: 1170px;
-  min-height: calc(100vh - 75px);
+  min-height: ${({ autoHeight }) =>
+    autoHeight ? "auto" : "calc(100vh - 75px)"};
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -31,13 +32,18 @@ export const Right = ({
   children,
   align
 }: {
-  children: any;
+  children?: any;
   align?: Align;
 }) => <Side align={align}>{children}</Side>;
 
-export const Slide = ({ children }) => {
+interface Slide {
+  children: any;
+  autoHeight?: boolean;
+}
+
+export const Slide = ({ children, autoHeight }: Slide) => {
   return (
-    <SlideWrapper>
+    <SlideWrapper autoHeight={autoHeight}>
       <Grid container alignItems="center" justify="center">
         <Grid item md={6} xs={12}>
           <Wrapper>

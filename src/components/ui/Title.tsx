@@ -1,10 +1,35 @@
 import styled from "styled-components";
 
+export const PageTitle = styled.h1`
+  font-family: Bitter, serif;
+  font-size: 54px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 0;
+  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+`;
+
 export const SectionTitle = styled.h2`
-  width: 225px;
+  width: 100%;
   height: 28.5px;
   font-family: Bitter, serif;
   font-size: 21px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: ${({ theme }) => theme && theme.atoms.colors.black};
+`;
+
+export const SectionSubtitle = styled.h3`
+  width: 100%;
+  height: 22.5px;
+  font-family: Bitter, serif;
+  font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;

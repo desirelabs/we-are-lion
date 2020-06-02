@@ -100,6 +100,9 @@ export const Menu = ({ isClear }: { isClear?: boolean }) => {
         <Link to="/" onClick={e => handleToggle(e)}>
           <NavItem>Accueil</NavItem>
         </Link>
+        <Link to="/services" onClick={e => handleToggle(e)}>
+          <NavItem>Nos services</NavItem>
+        </Link>
         <Link to="/blog" onClick={e => handleToggle(e)}>
           <NavItem>Articles</NavItem>
         </Link>

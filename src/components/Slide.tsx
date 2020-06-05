@@ -36,6 +36,14 @@ export const Right = ({
   align?: Align;
 }) => <Side align={align}>{children}</Side>;
 
+export const Center = ({
+  children,
+  align
+}: {
+  children?: any;
+  align?: Align;
+}) => <Side align={align}>{children}</Side>;
+
 interface Slide {
   children: any;
   autoHeight?: boolean;
@@ -45,28 +53,45 @@ export const Slide = ({ children, autoHeight }: Slide) => {
   return (
     <SlideWrapper autoHeight={autoHeight}>
       <Grid container alignItems="center" justify="center">
-        <Grid item md={6} xs={12}>
-          <Wrapper>
-            <Hyphenated language={fr}>
-              {React.Children.map(children, (child, i) => {
-                return (
-                  child.type === Left && React.cloneElement(child, { key: i })
-                );
-              })}
-            </Hyphenated>
-          </Wrapper>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Wrapper>
-            <Hyphenated language={fr}>
-              {React.Children.map(children, (child, i) => {
-                return (
-                  child.type === Right && React.cloneElement(child, { key: i })
-                );
-              })}
-            </Hyphenated>
-          </Wrapper>
-        </Grid>
+        {React.Children.map(children, (child, i) => {
+          return (
+            child.type === Left && (
+              <Grid item md={6} xs={12}>
+                <Wrapper>
+                  <Hyphenated language={fr}>
+                    {React.cloneElement(child, { key: i })}
+                  </Hyphenated>
+                </Wrapper>
+              </Grid>
+            )
+          );
+        })}
+        {React.Children.map(children, (child, i) => {
+          return (
+            child.type === Right && (
+              <Grid item md={6} xs={12}>
+                <Wrapper>
+                  <Hyphenated language={fr}>
+                    {React.cloneElement(child, { key: i })}
+                  </Hyphenated>
+                </Wrapper>
+              </Grid>
+            )
+          );
+        })}
+        {React.Children.map(children, (child, i) => {
+          return (
+            child.type === Center && (
+              <Grid item md={12} xs={12}>
+                <Wrapper>
+                  <Hyphenated language={fr}>
+                    {React.cloneElement(child, { key: i })}
+                  </Hyphenated>
+                </Wrapper>
+              </Grid>
+            )
+          );
+        })}
       </Grid>
     </SlideWrapper>
   );

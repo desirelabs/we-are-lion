@@ -32,20 +32,19 @@ export default ({ data }) => {
 export const query = graphql`
   {
     allMarkdownRemark(
-      limit: 1
-      sort: { fields: frontmatter___date }
-      filter: { frontmatter: { categories: { in: "post" } } }
+      limit: 10
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
           id
           frontmatter {
             title
-            date
+            date(formatString: "DD-MM-YYYY")
             par
+            categories
           }
-          excerpt(pruneLength: 300)
-          timeToRead
+          excerpt(pruneLength: 300, format: HTML)
           html
         }
       }

@@ -12,6 +12,11 @@ export const Wrapper = styled.div``;
 export const Title = styled.h2`
   font-family: Bitter, serif;
   font-size: 2rem;
+  /* For Link styling purpose */
+  a {
+    color: ${({ theme }) => theme && theme.atoms.colors.primary};
+    text-decoration: none;
+  }
 `;
 
 export const Meta = styled.small`

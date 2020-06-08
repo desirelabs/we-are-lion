@@ -11,29 +11,30 @@ export default () => {
           <h2>Informations légales</h2>
           <h3>1. Présentation du site.</h3>
           <Text>
-            En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour
-            la confiance dans l'économie numérique, il est précisé aux
+            En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour
+            la confiance dans l’économie numérique, il est précisé aux
             utilisateurs du site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>{" "}
-            l'identité des différents intervenants dans le cadre de sa
+            l’identité des différents intervenants dans le cadre de sa
             réalisation et de son suivi :
           </Text>
           <Text>
             <strong>Propriétaire</strong> : Franck LEBAS – Individuel 510919970
-            – 5 boulevard Baptistin Cayol, l'escale Bat A<br />
+            – 5 boulevard Baptistin Cayol, l’escale Bat A<br />
             <strong>Créateur</strong> : <a href="Franck LEBAS">Franck LEBAS</a>
             <br />
             <strong>Responsable publication</strong> : Franck LEBAS –
             francklebas@protonmail.ch
             <br />
-            Le responsable publication est une personne physique ou une personne
-            morale.
+            Le responsable de la publication est une personne physique ou une
+            personne morale.
             <br />
             <strong>Webmaster</strong> : Franck LEBAS –
             francklebas@protonmail.ch
             <br />
-            <strong>Hébergeur</strong> : Netlify – 5 boulevard Baptistin Cayol,
-            l'escale Bat A<br />
+            <strong>Hébergeur</strong> : Netlify – 2325 3rd St #215, San
+            Francisco, CA 94107, États-Unis
+            <br />
           </Text>
           <h3>
             2. Conditions générales d’utilisation du site et des services
@@ -73,12 +74,12 @@ export default () => {
             Franck LEBAS s’efforce de fournir sur le site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a> des
             informations aussi précises que possible. Toutefois, il ne pourra
-            être tenue responsable des omissions, des inexactitudes et des
+            être tenu responsable des omissions, des inexactitudes et des
             carences dans la mise à jour, qu’elles soient de son fait ou du fait
             des tiers partenaires qui lui fournissent ces informations.
           </Text>
           <Text>
-            Tous les informations indiquées sur le site{" "}
+            Toutes les informations indiquées sur le site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a> sont
             données à titre indicatif, et sont susceptibles d’évoluer. Par
             ailleurs, les renseignements figurant sur le site{" "}
@@ -145,27 +146,27 @@ export default () => {
           <Text>
             En France, les données personnelles sont notamment protégées par la
             loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004,
-            l'article L. 226-13 du Code pénal et la Directive Européenne du 24
+            l’article L. 226-13 du Code pénal et la Directive Européenne du 24
             octobre 1995.
           </Text>
           <Text>
-            A l'occasion de l'utilisation du site{" "}
+            À l’occasion de l’utilisation du site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>, peuvent
-            êtres recueillies : l'URL des liens par l'intermédiaire desquels
-            l'utilisateur a accédé au site{" "}
+            être recueillies : l’URL des liens par l’intermédiaire desquels
+            l’utilisateur a accédé au site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>, le
-            fournisseur d'accès de l'utilisateur, l'adresse de protocole
-            Internet (IP) de l'utilisateur.
+            fournisseur d’accès de l’utilisateur, l’adresse de protocole
+            Internet (IP) de l’utilisateur.
           </Text>
           <Text>
             {" "}
             En tout état de cause Franck LEBAS ne collecte des informations
-            personnelles relatives à l'utilisateur que pour le besoin de
+            personnelles relatives à l’utilisateur que pour le besoin de
             certains services proposés par le site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>.
-            L'utilisateur fournit ces informations en toute connaissance de
-            cause, notamment lorsqu'il procède par lui-même à leur saisie. Il
-            est alors précisé à l'utilisateur du site{" "}
+            L’utilisateur fournit ces informations en toute connaissance de
+            cause, notamment lorsqu’il procède par lui-même à leur saisie. Il
+            est alors précisé à l’utilisateur du site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>{" "}
             l’obligation ou non de fournir ces informations.
           </Text>
@@ -180,19 +181,19 @@ export default () => {
             envoyée.
           </Text>
           <Text>
-            Aucune information personnelle de l'utilisateur du site{" "}
-            <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a> n'est
-            publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou
-            vendue sur un support quelconque à des tiers. Seule l'hypothèse du
+            Aucune information personnelle de l’utilisateur du site{" "}
+            <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a> n’est
+            publiée à l’insu de l’utilisateur, échangée, transférée, cédée ou
+            vendue sur un support quelconque à des tiers. Seule l’hypothèse du
             rachat de Franck LEBAS et de ses droits permettrait la transmission
-            des dites informations à l'éventuel acquéreur qui serait à son tour
+            des dites informations à l’éventuel acquéreur qui serait à son tour
             tenu de la même obligation de conservation et de modification des
-            données vis à vis de l'utilisateur du site{" "}
+            données vis-à-vis de l’utilisateur du site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>.
           </Text>
           <Text>
             Les bases de données sont protégées par les dispositions de la loi
-            du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996
+            du 1ᵉʳ juillet 1998 transposant la directive 96/9 du 11 mars 1996
             relative à la protection juridique des bases de données.
           </Text>
           <h3>8. Liens hypertextes et cookies.</h3>
@@ -229,24 +230,26 @@ export default () => {
           </Text>
           <Text>
             Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le
-            bouton Firefox, puis aller dans l'onglet Options. Cliquer sur
-            l'onglet Vie privée. Paramétrez les Règles de conservation sur :
-            utiliser les paramètres personnalisés pour l'historique. Enfin
+            bouton Firefox, puis aller dans l’onglet Options. Cliquer sur
+            l’onglet Vie privée. Paramétrez les Règles de conservation sur :
+            utiliser les paramètres personnalisés pour l’historique. Enfin
             décochez-la pour désactiver les cookies.
           </Text>
           <Text>
             Sous Safari : Cliquez en haut à droite du navigateur sur le
             pictogramme de menu (symbolisé par un rouage). Sélectionnez
             Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la
-            section "Confidentialité", cliquez sur Paramètres de contenu. Dans
-            la section "Cookies", vous pouvez bloquer les cookies.
+            section &laquo;Confidentialité&raquo;, cliquez sur Paramètres de
+            contenu. Dans la section &laquo;Cookies&raquo;, vous pouvez bloquer
+            les cookies.
           </Text>
           <Text>
             Sous Chrome : Cliquez en haut à droite du navigateur sur le
             pictogramme de menu (symbolisé par trois lignes horizontales).
             Sélectionnez Paramètres. Cliquez sur Afficher les paramètres
-            avancés. Dans la section "Confidentialité", cliquez sur préférences.
-            Dans l'onglet "Confidentialité", vous pouvez bloquer les cookies.
+            avancés. Dans la section &laquo;Confidentialité&raquo;, cliquez sur
+            préférences. Dans l’onglet &laquo;Confidentialité&raquo;, vous
+            pouvez bloquer les cookies.
           </Text>
           <h3>9. Droit applicable et attribution de juridiction.</h3>
           <Text>
@@ -258,12 +261,12 @@ export default () => {
           <h3>10. Les principales lois concernées.</h3>
           <Text>
             Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n°
-            2004-801 du 6 août 2004 relative à l'informatique, aux fichiers et
+            2004-801 du 6 août 2004 relative à l’informatique, aux fichiers et
             aux libertés.
           </Text>
           <Text>
             {" "}
-            Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie
+            Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie
             numérique.
           </Text>
           <h3>11. Lexique.</h3>
@@ -272,18 +275,10 @@ export default () => {
           </Text>
           <Text>
             Informations personnelles : « les informations qui permettent, sous
-            quelque forme que ce soit, directement ou non, l'identification des
-            personnes physiques auxquelles elles s'appliquent » (article 4 de la
+            quelque forme que ce soit, directement ou non, l’identification des
+            personnes physiques auxquelles elles s’appliquent » (article 4 de la
             loi n° 78-17 du 6 janvier 1978).
           </Text>
-          Crédits : <br />
-          Le modèle de mentions légales est offert par Subdelirium.com{" "}
-          <a
-            target="_blank"
-            href="https://www.subdelirium.com/generateur-de-mentions-legales/"
-          >
-            Générateur de mentions légales
-          </a>
         </Center>
         <Right />
       </Slide>

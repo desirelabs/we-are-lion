@@ -6,7 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `We Are Lion`
+    title: `We Are Lion`,
+    siteUrl: "https://we-are-lion.fr"
   },
   plugins: [
     {
@@ -29,6 +30,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-react-helmet"
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap"
   ]
 };

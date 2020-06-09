@@ -75,7 +75,7 @@ export const Layout = ({
             <Grid item xs={12}>
               <Wrapper>
                 <p style={{ textAlign: "center" }}>
-                  {getYear()} &copy; We Are Lion -{" "}
+                  {getYear()} &copy; We Are Lion –{" "}
                   <Link to="/legal">Mentions légales</Link>
                 </p>
               </Wrapper>

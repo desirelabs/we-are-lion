@@ -11,7 +11,7 @@ export default function BlogPost({ pageContext }) {
         <Post.Wrapper>
           <Post.Title>{title}</Post.Title>
           <Post.Meta>
-            Écrit par {par} - {date}
+            Écrit par {par} – {date}
           </Post.Meta>
           <Post.Content
             dangerouslySetInnerHTML={{ __html: html }}

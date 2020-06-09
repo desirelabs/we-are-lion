@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/ui/Layout";
 import { Title } from "../components/ui/Title";
+import { ReadMore } from "../components/ui/ReadMore";
 import * as Post from "../components/ui/Post";
 import { PostsNavigation } from "../components/ui/PostsNavigation";
 
@@ -27,6 +28,9 @@ export default class BlogList extends React.Component {
                 <Post.Content
                   dangerouslySetInnerHTML={{ __html: excerpt }}
                 ></Post.Content>
+                <ReadMore to={`${node.fields.slug}`}>
+                  Lire la suite &raquo;
+                </ReadMore>
               </Post.Wrapper>
             );
           })}

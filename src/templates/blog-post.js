@@ -3,7 +3,6 @@ import { Layout } from "../components/ui/Layout";
 import * as Post from "../components/ui/Post";
 
 export default function BlogPost({ pageContext }) {
-  console.log(pageContext);
   const { html, title, date, par } = pageContext;
   return (
     <Layout isClear={false}>

@@ -8,8 +8,7 @@ import { PostsNavigation } from "../components/ui/PostsNavigation";
 
 export default class BlogList extends React.Component {
   render() {
-    console.log(this.props.pageContext);
-    const posts = this.props.data.allMarkdownRemark.edges;
+    const posts = this.props.data.allMar  kdownRemark.edges;
     return (
       <Layout isClear={false}>
         <Post.Posts>

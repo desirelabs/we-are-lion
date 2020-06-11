@@ -15,7 +15,7 @@ export const HeroTitle = styled.h1`
   line-height: normal;
   letter-spacing: normal;
   margin: 0;
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  color: ${({ theme }) => theme && theme.atoms.colors.dark};
 `;
 
 export const HeroTitle2 = styled.h2`
@@ -27,7 +27,7 @@ export const HeroTitle2 = styled.h2`
   line-height: normal;
   letter-spacing: normal;
   margin: 0;
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  color: ${({ theme }) => theme && theme.atoms.colors.dark};
 `;
 
 export const HeroTitle3 = styled.h3`
@@ -39,7 +39,7 @@ export const HeroTitle3 = styled.h3`
   line-height: normal;
   letter-spacing: normal;
   margin: 16px 0 30px;
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  color: ${({ theme }) => theme && theme.atoms.colors.dark};
 `;
 
 export const Title = styled.h2`
@@ -50,7 +50,7 @@ export const Title = styled.h2`
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  color: ${({ theme }) => theme && theme.atoms.colors.dark};
 `;
 
 export const Intro = styled.p`
@@ -61,7 +61,7 @@ export const Intro = styled.p`
   font-style: normal;
   line-height: 1.54;
   letter-spacing: normal;
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  color: ${({ theme }) => theme && theme.atoms.colors.dark};
 `;
 
 export const Content = styled.p`
@@ -72,5 +72,5 @@ export const Content = styled.p`
   font-style: normal;
   line-height: 1.61;
   letter-spacing: normal;
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  color: ${({ theme }) => theme && theme.atoms.colors.dark};
 `;

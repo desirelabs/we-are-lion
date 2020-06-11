@@ -106,7 +106,7 @@ export const ContactForm = () => {
           type="email"
           name="email"
           value={email}
-          label="Email"
+          label="E-mail"
           variant="outlined"
           color="secondary"
           onChange={handleChange}
@@ -132,6 +132,7 @@ export const ContactForm = () => {
           data-callback="handleSubmit"
           data-action="submit"
           size="large"
+          fluid={true}
         >
           Envoyer
         </Button>

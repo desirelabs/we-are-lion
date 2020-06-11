@@ -2,19 +2,17 @@ import React from "react";
 import { Text } from "../components/ui/Text";
 import { Illustration } from "../components/ui/Illustration";
 import { Layout } from "../components/ui/Layout";
-import * as Section from "../components/ui/Section";
 import { PageTitle } from "../components/ui/Title";
 import { Slide, Left, Right } from "../components/Slide";
 import { Link } from "gatsby";
-// import { a } from "../components/ui/MenuWrapper";
-// import { SearchTool } from "../components/SearchTool";
+import { H3Light } from "../components/ui/Headings";
 
 export default () => (
   <Layout isClear={false}>
     <Slide>
       <Left>
         <PageTitle>Oups !</PageTitle>
-        <Section.Title>La page demandée n’existe pas…</Section.Title>
+        <H3Light>La page demandée n’existe pas…</H3Light>
         <Text>
           Pas de panique ! Vous pouvez toujours jeter un œil sur les pages
           suivantes :

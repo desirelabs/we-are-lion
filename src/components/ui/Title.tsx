@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { TextAlignment } from "../../interfaces";
 
-export const PageTitle = styled.h1`
+export const PageTitle = styled.h1<{ align?: TextAlignment }>`
   font-family: Bitter, serif;
   font-size: 54px;
   font-weight: bold;
@@ -8,8 +9,9 @@ export const PageTitle = styled.h1`
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  margin: 0;
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  margin: 15px 0;
+  color: ${({ theme }) => theme && theme.atoms.colors.dark};
+  ${({ align }) => align && `text-align: ${align}`};
 `;
 
 export const SectionTitle = styled.h2`

@@ -1,20 +1,22 @@
 import React from "react";
 import { Layout } from "../components/ui/Layout";
-import { Slide, Left, Right } from "../components/Slide";
+import { Slide, Left, Right, Center } from "../components/Slide";
 import { PageTitle } from "../components/ui/Title";
-import * as Section from "../components/ui/Section";
 import { Text } from "../components/ui/Text";
 import { Illustration } from "../components/ui/Illustration";
 import { Fullpage } from "../components/Fullpage";
+import { H2 } from "../components/ui/Headings";
 
 export default () => {
   return (
     <Layout isClear={true}>
       <Fullpage>
         <Slide autoHeight>
+          <Center>
+            <PageTitle align="center">Nos services</PageTitle>
+          </Center>
           <Left>
-            <PageTitle>Nos services</PageTitle>
-            <Section.Title>Boutiques en ligne</Section.Title>
+            <H2>Boutiques en ligne</H2>
             <Text>
               Augmentez votre visibilité et vos ventes en ajoutant un nouveau
               canal de distribution via internet. Touchez un public cible grâce
@@ -35,7 +37,7 @@ export default () => {
 
         <Slide autoHeight>
           <Left>
-            <Section.Title>Applications web</Section.Title>
+            <H2>Applications web</H2>
             <Text>
               Un projet application ? Nous avons les atouts pour le rendre réel.
               Nous proposons tous les outils pour créer des applications fiables
@@ -57,7 +59,7 @@ export default () => {
 
         <Slide autoHeight>
           <Left>
-            <Section.Title>Sites vitrine</Section.Title>
+            <H2>Sites vitrine</H2>
             <Text>
               Une bonne vi­trine est une vi­trine at­trac­tive et qui offre une
               ex­pé­rience d’uti­li­sa­tion op­ti­male. Nous met­tons en œuvre
@@ -79,7 +81,7 @@ export default () => {
 
         <Slide autoHeight>
           <Left>
-            <Section.Title>Ateliers et sessions de formation</Section.Title>
+            <H2>Ateliers et sessions de formation</H2>
             <Text>
               En tant que professionnels du web, nous vous accompagnons dans la
               prise en main de votre outil. Nous concevons les documents
@@ -99,9 +101,11 @@ export default () => {
         </Slide>
 
         <Slide autoHeight>
+          <Center>
+            <PageTitle align="center">Inclus dans nos prestations</PageTitle>
+          </Center>
           <Left>
-            <PageTitle>Inclus dans nos prestations</PageTitle>
-            <Section.Title>Des solutions clés en main</Section.Title>
+            <H2>Des solutions clés en main</H2>
             <Text>
               De la conception à la mise en ligne, puis en suivi post démarrage,
               nous assurons toutes les étapes clés de la mise sur les rails de
@@ -123,9 +127,7 @@ export default () => {
 
         <Slide autoHeight>
           <Left>
-            <Section.Title>
-              Une offre structurée et tarif sur mesure
-            </Section.Title>
+            <H2>Une offre structurée, un tarif sur mesure</H2>
             <Text>
               Chaque professionnel est unique et possède ses propres
               problématiques. Nous vous écoutons et détaillons avec vous ces

@@ -9,8 +9,8 @@ const ReadMoreWrapper = styled.span`
   }
 `;
 
-export const ReadMore = ({ to }) => (
+export const StyledLink = ({ to, children }) => (
   <ReadMoreWrapper>
-    <Link to={to}>Lire la suite &raquo;</Link>
+    <Link to={to}>{children}</Link>
   </ReadMoreWrapper>
 );

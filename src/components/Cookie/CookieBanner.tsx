@@ -7,6 +7,8 @@ import ReactGA from "react-ga";
 import { Banner } from "./Banner";
 import { CloseLink } from "./CloseLink";
 import { Button } from "../ui/Button";
+import { H1 } from "../ui/Headings";
+import { Text } from "../ui/Text";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -80,13 +82,13 @@ export const CookieBanner = () => {
   return (
     consent === "unset" && (
       <Banner>
-        <p>
+        <Text>
           Ce site utilise Google Analytics. En continuant à naviguer, vous nous
           autorisez à déposer un cookie à des fins de mesure d'audience.{" "}
           <Button type="button" onClick={handleOpen}>
-            En savoir plus
+            Choisir mes préférences
           </Button>
-        </p>
+        </Text>
         <Modal
           open={open}
           onClose={handleClose}
@@ -94,17 +96,17 @@ export const CookieBanner = () => {
           aria-describedby="simple-modal-description"
         >
           <div className={classes.paper}>
-            <h1>Les cookies Google Analytics</h1>
-            <p>
+            <H1>Les cookies Google Analytics</H1>
+            <Text>
               Ce site utilise des cookies de Google Analytics. Ces cookies nous
               aident à identifier le contenu qui vous intéresse le plus ainsi
               qu'à repérer certains dysfonctionnements. Vos données de
               navigations sur ce site sont envoyées à Google Inc.
-            </p>
+            </Text>
             <div>
               <Button
-                variant={"secondary"}
-                size={"small"}
+                variant="secondary"
+                size="small"
                 id="ga-cancel-button"
                 name="ga-cancel"
                 onClick={() => disagree()}
@@ -112,8 +114,8 @@ export const CookieBanner = () => {
                 S'opposer
               </Button>{" "}
               <Button
-                variant={"primary"}
-                size={"small"}
+                variant="primary"
+                size="small"
                 id="ga-confirm-button"
                 name="ga-confirm"
                 onClick={() => agree()}

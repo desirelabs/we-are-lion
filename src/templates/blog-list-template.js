@@ -1,14 +1,14 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { Layout } from "../components/ui/Layout";
 import { Title } from "../components/ui/Title";
-import { ReadMore } from "../components/ui/ReadMore";
+import { StyledLink } from "../components/ui/StyledLink";
 import * as Post from "../components/ui/Post";
 import { PostsNavigation } from "../components/ui/PostsNavigation";
+import { H2 } from "../components/ui/Headings";
 
 export default class BlogList extends React.Component {
   render() {
-    console.log(this.props.pageContext);
     const posts = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout isClear={false}>
@@ -19,18 +19,18 @@ export default class BlogList extends React.Component {
             const { title, date, par } = frontmatter;
             return (
               <Post.Wrapper key={node.fields.slug}>
-                <Post.Title>
-                  <Link to={`${node.fields.slug}`}>{title}</Link>
-                </Post.Title>
+                <H2>
+                  <StyledLink to={`${node.fields.slug}`}>{title}</StyledLink>
+                </H2>
                 <Post.Meta>
                   Écrit par {par} - {date}
                 </Post.Meta>
                 <Post.Content
                   dangerouslySetInnerHTML={{ __html: excerpt }}
                 ></Post.Content>
-                <ReadMore to={`${node.fields.slug}`}>
+                <StyledLink to={`${node.fields.slug}`}>
                   Lire la suite &raquo;
-                </ReadMore>
+                </StyledLink>
               </Post.Wrapper>
             );
           })}

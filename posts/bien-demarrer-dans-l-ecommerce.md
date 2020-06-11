@@ -23,10 +23,7 @@ Si fermer votre boutique n’est pas envisageable, sachez qu’il existe différ
   <li><a href="#online-store">Point de vente en ligne</a></li>
   <li><a href="#customer-satisfaction">Satisfaction et fidélisation</a></li>
   <li><a href="#how-to">Comment faire ?</a></li>
-  <li><a href="#get-started">Vous êtes convaincu, c’est le moment de se lancer !</a></li>
-  <li><a href="#epilogue">Tout faire seul c’est difficile</a></li>
-  <li><a href="#expert">Expert en communication web</a></li>
-  <li><a href="#our-services">Nos services</a></li>
+  <li><a href="#epilogue">Épilogue</a></li>
 </ul>
 </details>
 

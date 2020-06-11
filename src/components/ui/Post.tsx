@@ -7,7 +7,9 @@ export const Posts = styled.div`
   padding-right: 15px;
 `;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  margin-top: 3rem;
+`;
 
 export const Title = styled.h2`
   font-family: Bitter, serif;
@@ -20,7 +22,10 @@ export const Title = styled.h2`
 `;
 
 export const Meta = styled.small`
-  color: ${({ theme }) => theme && theme.atoms.colors.grey};
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  color: ${({ theme }) => theme && theme.atoms.colors.grey300};
 `;
 
 export const Content = styled.div`
@@ -29,6 +34,7 @@ export const Content = styled.div`
   img {
     max-width: 100%;
     height: auto;
+    margin: 0.5rem 0;
   }
   a {
     color: ${({ theme }) => theme && theme.atoms.colors.primary};

@@ -8,6 +8,8 @@ import Grid from "@material-ui/core/Grid";
 import { Wrapper } from "./Section";
 import { Link } from "gatsby";
 import { CookieBanner } from "../Cookie/CookieBanner";
+import { Text } from "./Text";
+import { StyledLink } from "./StyledLink";
 
 export const Container = styled.div<{ fluid?: boolean }>`
   width: 100%;
@@ -74,10 +76,10 @@ export const Layout = ({
           <Grid container alignItems="center" justify="center">
             <Grid item xs={12}>
               <Wrapper>
-                <p style={{ textAlign: "center" }}>
+                <Text align="center">
                   {getYear()} &copy; We Are Lion –{" "}
-                  <Link to="/legal">Mentions légales</Link>
-                </p>
+                  <StyledLink to="/legal">Mentions légales</StyledLink>
+                </Text>
               </Wrapper>
             </Grid>
           </Grid>

@@ -19,10 +19,13 @@ const bareTheme = {
     colors: {
       white: "#fff",
       grey: "#484848",
+      grey300: "#acacac",
       dark: "#131313",
       black: "#000000",
       primary: "#ff2e64",
-      secondary: "#ea6060",
+      secondary: "#ff7e07",
+      primaryLight: "#ff79a1",
+      secondaryLight: "#ffb571",
       primaryDark: "#c32955",
       secondaryDark: "#cd4848",
       lightGrey: "#e6e6e6"

@@ -55,6 +55,19 @@ export const Slide = ({ children, autoHeight }: Slide) => {
       <Grid container alignItems="center" justify="center">
         {React.Children.map(children, (child, i) => {
           return (
+            child.type === Center && (
+              <Grid item md={12} xs={12}>
+                <Wrapper>
+                  <Hyphenated language={fr}>
+                    {React.cloneElement(child, { key: i })}
+                  </Hyphenated>
+                </Wrapper>
+              </Grid>
+            )
+          );
+        })}
+        {React.Children.map(children, (child, i) => {
+          return (
             child.type === Left && (
               <Grid item md={6} xs={12}>
                 <Wrapper>
@@ -70,19 +83,6 @@ export const Slide = ({ children, autoHeight }: Slide) => {
           return (
             child.type === Right && (
               <Grid item md={6} xs={12}>
-                <Wrapper>
-                  <Hyphenated language={fr}>
-                    {React.cloneElement(child, { key: i })}
-                  </Hyphenated>
-                </Wrapper>
-              </Grid>
-            )
-          );
-        })}
-        {React.Children.map(children, (child, i) => {
-          return (
-            child.type === Center && (
-              <Grid item md={12} xs={12}>
                 <Wrapper>
                   <Hyphenated language={fr}>
                     {React.cloneElement(child, { key: i })}

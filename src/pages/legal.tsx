@@ -2,14 +2,15 @@ import React from "react";
 import { Layout } from "../components/ui/Layout";
 import { Slide, Center, Right } from "../components/Slide";
 import { Text } from "../components/ui/Text";
+import { H1, H2 } from "../components/ui/Headings";
 
 export default () => {
   return (
     <Layout isClear={true}>
       <Slide>
         <Center>
-          <h2>Informations légales</h2>
-          <h3>1. Présentation du site.</h3>
+          <H1>Informations légales</H1>
+          <H2>1. Présentation du site.</H2>
           <Text>
             En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour
             la confiance dans l’économie numérique, il est précisé aux
@@ -36,10 +37,10 @@ export default () => {
             Francisco, CA 94107, États-Unis
             <br />
           </Text>
-          <h3>
+          <H2>
             2. Conditions générales d’utilisation du site et des services
             proposés.
-          </h3>
+          </H2>
           <Text>
             L’utilisation du site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a> implique
@@ -64,7 +65,7 @@ export default () => {
             s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le
             plus souvent possible afin d’en prendre connaissance.
           </Text>
-          <h3>3. Description des services fournis.</h3>
+          <H2>3. Description des services fournis.</H2>
           <Text>
             Le site <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>{" "}
             a pour objet de fournir une information concernant l’ensemble des
@@ -87,7 +88,7 @@ export default () => {
             pas exhaustifs. Ils sont donnés sous réserve de modifications ayant
             été apportées depuis leur mise en ligne.
           </Text>
-          <h3>4. Limitations contractuelles sur les données techniques.</h3>
+          <H2>4. Limitations contractuelles sur les données techniques.</H2>
           <Text>Le site utilise la technologie JavaScript.</Text>
           <Text>
             Le site Internet ne pourra être tenu responsable de dommages
@@ -96,7 +97,7 @@ export default () => {
             contenant pas de virus et avec un navigateur de dernière génération
             mis-à-jour
           </Text>
-          <h3>5. Propriété intellectuelle et contrefaçons.</h3>
+          <H2>5. Propriété intellectuelle et contrefaçons.</H2>
           <Text>
             Franck LEBAS est propriétaire des droits de propriété intellectuelle
             ou détient les droits d’usage sur tous les éléments accessibles sur
@@ -115,7 +116,7 @@ export default () => {
             contrefaçon et poursuivie conformément aux dispositions des articles
             L.335-2 et suivants du Code de Propriété Intellectuelle.
           </Text>
-          <h3>6. Limitations de responsabilité.</h3>
+          <H2>6. Limitations de responsabilité.</H2>
           <Text>
             Franck LEBAS ne pourra être tenue responsable des dommages directs
             et indirects causés au matériel de l’utilisateur, lors de l’accès au
@@ -142,7 +143,7 @@ export default () => {
             pornographique, quel que soit le support utilisé (texte,
             photographie…).
           </Text>
-          <h3>7. Gestion des données personnelles.</h3>
+          <H2>7. Gestion des données personnelles.</H2>
           <Text>
             En France, les données personnelles sont notamment protégées par la
             loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004,
@@ -196,7 +197,7 @@ export default () => {
             du 1ᵉʳ juillet 1998 transposant la directive 96/9 du 11 mars 1996
             relative à la protection juridique des bases de données.
           </Text>
-          <h3>8. Liens hypertextes et cookies.</h3>
+          <H2>8. Liens hypertextes et cookies.</H2>
           <Text>
             Le site <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a>{" "}
             contient un certain nombre de liens hypertextes vers d’autres sites,
@@ -251,14 +252,14 @@ export default () => {
             préférences. Dans l’onglet &laquo;Confidentialité&raquo;, vous
             pouvez bloquer les cookies.
           </Text>
-          <h3>9. Droit applicable et attribution de juridiction.</h3>
+          <H2>9. Droit applicable et attribution de juridiction.</H2>
           <Text>
             Tout litige en relation avec l’utilisation du site{" "}
             <a href="http://www.we-are-lion.fr/">www.we-are-lion.fr</a> est
             soumis au droit français. Il est fait attribution exclusive de
             juridiction aux tribunaux compétents de Paris.
           </Text>
-          <h3>10. Les principales lois concernées.</h3>
+          <H2>10. Les principales lois concernées.</H2>
           <Text>
             Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n°
             2004-801 du 6 août 2004 relative à l’informatique, aux fichiers et
@@ -269,7 +270,7 @@ export default () => {
             Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie
             numérique.
           </Text>
-          <h3>11. Lexique.</h3>
+          <H2>11. Lexique.</H2>
           <Text>
             Utilisateur : Internaute se connectant, utilisant le site susnommé.
           </Text>

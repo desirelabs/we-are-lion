@@ -3,6 +3,9 @@ title: "Bienvenue chez Lion !"
 date: "2020-05-26"
 par: "Franck"
 categories: ["post"]
+htmlTitle: "Agence Lion ; Nouvelle agence web à Marseille"
+description: "Spécialisés dans la création de boutique e-commerce en ligne et sites vitrine"
+slug: "bonjour"
 ---
 
 ![Feux d'artifice](/img/posts/fireworks.jpg)

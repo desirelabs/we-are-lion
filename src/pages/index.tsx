@@ -35,7 +35,11 @@ export default ({ data }) => {
             </Link>
           </Left>
           <Right>
-            <Illustration src="/img/start-up.svg" width="100%" />
+            <Illustration
+              src="/img/start-up.svg"
+              width="100%"
+              alt="Personnages figurants un lancement de produit digital"
+            />
           </Right>
         </Slide>
         <Slide>
@@ -52,7 +56,11 @@ export default ({ data }) => {
             </Text>
           </Left>
           <Right>
-            <Illustration src="/img/strategy.svg" width="100%" />
+            <Illustration
+              src="/img/strategy.svg"
+              width="100%"
+              alt="Personnages vectoriels en train de planifier"
+            />
           </Right>
         </Slide>
         <Slide>
@@ -71,7 +79,11 @@ export default ({ data }) => {
             <Text>Chez Lion, nous aimons les outils open source ❤️</Text>
           </Left>
           <Right>
-            <Illustration src="/img/programming.svg" width="100%" />
+            <Illustration
+              src="/img/programming.svg"
+              width="100%"
+              alt="Personnages vectoriels en train d'écrire du code informatique"
+            />
           </Right>
         </Slide>
         <Slide>
@@ -89,7 +101,11 @@ export default ({ data }) => {
             </Text>
           </Left>
           <Right>
-            <Illustration src="/img/seo-optimization.svg" width="100%" />
+            <Illustration
+              src="/img/seo-optimization.svg"
+              width="100%"
+              alt="Personnages en train d'analyser des résultats"
+            />
           </Right>
         </Slide>
         <Slide>
@@ -108,7 +124,11 @@ export default ({ data }) => {
             </Text>
           </Left>
           <Right>
-            <Illustration src="/img/consulting.svg" width="100%" />
+            <Illustration
+              src="/img/consulting.svg"
+              width="100%"
+              alt="Personnages en train de participer à une formation"
+            />
           </Right>
         </Slide>
       </Layout>

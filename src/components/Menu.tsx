@@ -12,11 +12,13 @@ export const MenuLink = styled.span`
 `;
 
 const MenuToggleCloseIcon = styled(Icon).attrs({
-  src: "/img/menu-toggler-closed.svg"
+  src: "/img/menu-toggler-closed.svg",
+  alt: "Icone de fermeture"
 })``;
 
 const MenuToggleOpenIcon = styled(Icon).attrs({
-  src: "/img/menu-toggler-opened.svg"
+  src: "/img/menu-toggler-opened.svg",
+  alt: "Icone d'ouverture"
 })``;
 
 const TRANSITION_DELAY = 0.15;

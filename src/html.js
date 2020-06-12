@@ -6,6 +6,7 @@ export default function HTML(props) {
     <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
+        <meta lang="fr_FR" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <link
           rel="apple-touch-icon"

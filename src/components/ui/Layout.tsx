@@ -65,7 +65,11 @@ export const Layout = ({
         <Header isClear={isClear}>
           <Navigation>
             <Link to="/">
-              <Logo src="/img/logo-we-are-lion.svg" height="70" />
+              <Logo
+                src="/img/logo-we-are-lion.svg"
+                height="70"
+                alt="Logotype We Are Lion représentant un Lion vectoriel vu de face"
+              />
             </Link>
             <Menu isClear={isClear} />
           </Navigation>

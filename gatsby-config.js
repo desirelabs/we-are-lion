@@ -33,6 +33,14 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap"
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://we-are-lion.fr",
+        sitemap: "https://we-are-lion.fr/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }]
+      }
+    }
   ]
 };

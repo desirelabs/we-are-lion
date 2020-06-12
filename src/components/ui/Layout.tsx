@@ -6,10 +6,11 @@ import styled from "styled-components";
 import { Footer } from "../Footer";
 import Grid from "@material-ui/core/Grid";
 import { Wrapper } from "./Section";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { CookieBanner } from "../Cookie/CookieBanner";
 import { Text } from "./Text";
 import { StyledLink } from "./StyledLink";
+import { Helmet } from "react-helmet";
 
 export const Container = styled.div<{ fluid?: boolean }>`
   width: 100%;

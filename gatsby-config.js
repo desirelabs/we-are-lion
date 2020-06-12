@@ -7,7 +7,9 @@
 module.exports = {
   siteMetadata: {
     title: `We Are Lion`,
-    siteUrl: "https://we-are-lion.fr"
+    siteUrl: "https://we-are-lion.fr",
+    description:
+      "Agence Lion votre partenaire pour la création de votre business en ligne."
   },
   plugins: [
     {

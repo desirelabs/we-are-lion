@@ -5,6 +5,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
+        site {
+          siteMetadata {
+            title
+          }
+        }
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
@@ -19,6 +24,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 date(formatString: "DD-MM-YYYY")
                 par
                 categories
+                htmlTitle
+                description
               }
               excerpt(pruneLength: 300, format: HTML)
               html
@@ -44,6 +51,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
+        defaultDescription: result.data.site.siteMetadata.description,
+        siteName: result.data.site.siteMetadata.title,
         slug: node.fields.slug,
         title,
         date,

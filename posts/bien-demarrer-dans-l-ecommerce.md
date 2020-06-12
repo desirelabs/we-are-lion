@@ -3,6 +3,9 @@ title: "Les clés pour bien démarrer votre projet e-commerce"
 date: "2020-06-05"
 par: "Franck"
 categories: ["post", "draft"]
+htmlTitle: "Lancez votre boutique en ligne dès aujourd'hui"
+description: "Tous les conseils pour démarrer son site e-commerce et augmenter son chiffre d'affaire."
+slug: "bien-demarrer-dans-l-ecommerce"
 ---
 
 ![Achat en ligne](/img/posts/online-shopping.jpg)

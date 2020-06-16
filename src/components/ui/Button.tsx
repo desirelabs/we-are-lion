@@ -14,6 +14,9 @@ const small = css`
   font-size: 12px;
 `;
 
+/**
+ * TODO: hover effect
+ */
 const primary = css`
   background-image: linear-gradient(
     to bottom,
@@ -21,13 +24,13 @@ const primary = css`
     ${({ theme }) => theme && theme.atoms.colors.primary}
   );
   background-color: ${({ theme }) => theme && theme.atoms.colors.primary};
-  outline: ${({ theme }) => theme && `2px solid ${theme.atoms.colors.primary}`};
+  border: ${({ theme }) => theme && `2px solid ${theme.atoms.colors.primary}`};
   color: ${({ theme }) => theme && theme.atoms.colors.white};
-  &:hover {
-    background-image: linear-gradient(to bottom, transparent, white);
-  }
 `;
 
+/**
+ * TODO: hover effect
+ */
 const secondary = css`
   background-image: linear-gradient(
     to bottom,
@@ -35,12 +38,8 @@ const secondary = css`
     ${({ theme }) => theme && theme.atoms.colors.white}
   );
   background-color: white;
-  outline: ${({ theme }) =>
-    theme && `2px solid ${theme.atoms.colors.secondary}`};
-  color: ${({ theme }) => theme && `2px solid ${theme.atoms.colors.primary}`};
-  &:hover {
-    background-image: linear-gradient(to bottom, transparent, white);
-  }
+  border: ${({ theme }) => theme && `2px solid ${theme.atoms.colors.primary}`};
+  color: ${({ theme }) => theme && theme.atoms.colors.primary};
 `;
 
 const base = css`

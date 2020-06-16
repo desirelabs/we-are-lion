@@ -82,13 +82,13 @@ export const CookieBanner = () => {
   return (
     consent === "unset" && (
       <Banner>
-        <Text>
+        <p>
           Ce site utilise Google Analytics. En continuant à naviguer, vous nous
           autorisez à déposer un cookie à des fins de mesure d'audience.{" "}
           <Button type="button" onClick={handleOpen}>
             Choisir mes préférences
           </Button>
-        </Text>
+        </p>
         <Modal
           open={open}
           onClose={handleClose}

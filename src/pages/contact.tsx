@@ -41,7 +41,7 @@ export default ({ data }) => {
               Utilisez le formulaire ci-après, ou bien téléphonez-nous pour en
               parler directement.
               <br />
-              <Phone href="tel:0695681604">06 95 68 16 04</Phone>
+              <Phone href="tel:0698054772">06 98 05 47 72</Phone>
             </Text>
           </Left>
           <Right>

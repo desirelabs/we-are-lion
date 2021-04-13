@@ -137,6 +137,4 @@ Que ce soit pour la publicité, la création d’un point de vente en ligne ou l
 
 Il y a beaucoup de choses à prendre en compte quand on souhaite se lancer dans la vente en ligne. Je n’ai exposé ici que la partie émergée de l’iceberg. Gérer tous les aspects d’un site de commerce en ligne est un travail à temps plein pour tout ce qui concerne l’aspect marketing. De plus cela demande de nombreuses heures pour assimiler comment chaque outil fonctionne, faire des essais pour comprendre ce qui marche le mieux pour vous, et la route pour parvenir à en tirer un bénéfice est souvent parsemée d’embuches. Il faut se montrer tout à la fois persévérant et résilient.
 
-Pour aller plus loin et obtenir un service personnalisé de A à Z, <a href="/contact">contactez-nous</a>. Nous vous accompagnerons dans la réussite de votre projet.
-
 <small>\*Loi anti fraude à la TVA est un texte qui prévoit l’utilisation d’un logiciel d’encaissement certifié NF525 ou LNE pour les commerçants recevant des paiements assujettis à la TVA, pour des biens ou des services aux particuliers. Le texte exclut les paiements B2B et les non assujetties à la TVA. Les sites e-commerces sont assimilés à des logiciels d’encaissement et tombent donc sous le joug de cette loi.</small>

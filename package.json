@@ -27,7 +27,7 @@
     "gatsby-plugin-styled-components": "^3.3.2",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-source-filesystem": "^2.3.8",
-    "gatsby-transformer-remark": "^2.8.13",
+    "gatsby-transformer-remark": "^5.25.1",
     "hyphenated": "^1.2.0",
     "hyphenated-fr": "^1.2.0",
     "js-cookie": "^2.2.1",
